@@ -1,0 +1,110 @@
+import { Link } from "react-router-dom";
+
+import {
+  homeItems,
+  blogItems,
+  pageItems,
+  dashboardItems,
+} from "../../data/mainMenuData";
+import CategoriesMegaMenu from "./CategoriesMegaMenu";
+import {
+  isActiveParent,
+  isActiveLink,
+  isActiveParentChaild,
+} from "../../utils/linkActiveChecker";
+import { useLocation } from "react-router-dom";
+import { useState } from "react";
+
+const MainMenu = ({ style = "" }) => {
+  const { pathname } = useLocation();
+  const [isActiveParent, setIsActiveParent] = useState(false);
+
+  return (
+    <nav className="menu js-navList">
+      <ul className={`menu__nav ${style} -is-active`}>
+        <li
+          className={`${
+            isActiveParentChaild(homeItems, pathname) ? "current" : ""
+          } menu-item-has-children`}
+        >
+          <a href="#">
+            <span className="mr-10">Главная</span>
+            <i className="icon" />
+          </a>
+          {/* <ul className="subnav">
+            {homeItems.map((menu, i) => (
+              <li
+                key={i}
+                className={
+                  isActiveLink(menu.routePath, pathname) ? "current" : ""
+                }
+              >
+                <Link to={menu.routePath}>{menu.name}</Link>
+              </li>
+            ))}
+          </ul> */}
+        </li>
+        {/* End home page menu */}
+
+        <li
+          className={
+            isActiveParent
+              ? "menu-item-has-children -has-mega-menu current"
+              : "menu-item-has-children -has-mega-menu"
+          }
+        >
+          <a href="#">
+            <span className="mr-10">Популярные Места</span>
+            <i className="icon icon-chevron-sm-down" />
+          </a>
+          <div className="mega">
+            <CategoriesMegaMenu setIsActiveParent={setIsActiveParent} />
+          </div>
+        </li>
+        {/* End categories menu items */}
+
+        
+
+        <li
+          className={`${
+            isActiveParentChaild(blogItems, pathname) ? "current" : ""
+          } menu-item-has-children`}
+        >
+          <a href="/">
+            <span className="mr-10">Поездки</span>
+            <i className="icon icon-chevron-sm-down" />
+          </a>
+          <ul className="subnav">
+            {[
+              {name: 'Предстоящие', routePath: '/'},
+              {name: 'Прошедшие', routePath: '/'}
+            ].map((menu, i) => (
+              <li
+                key={i}
+                className={
+                  isActiveLink(menu.routePath, pathname) ? "current" : ""
+                }
+              >
+                <Link to={menu.routePath}>{menu.name}</Link>
+              </li>
+            ))}
+          </ul>
+        </li>
+        {/* End blogIems */}
+
+        <li className={pathname === "/destinations" ? "current" : ""}>
+          <Link to="/about">О Нас</Link>
+        </li>
+        {/* End Destinatinos single menu */}
+
+        <li className={pathname === "/destinations" ? "current" : ""}>
+          <Link to="/destinations">Оставить заявку</Link>
+        </li>
+        {/* End Destinatinos single menu */}
+
+      </ul>
+    </nav>
+  );
+};
+
+export default MainMenu;
