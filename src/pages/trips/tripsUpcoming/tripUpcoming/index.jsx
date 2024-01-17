@@ -28,7 +28,7 @@ const metadata = {
   description: "GoTrip - Travel & Tour ReactJs Template",
 };
 
-const Trip = () => {
+const TripUpcoming = () => {
   let params = useParams();
   const id = params.id;
   const trip =
@@ -292,4 +292,4 @@ const Trip = () => {
   );
 };
 
-export default Trip;
+export default TripUpcoming;

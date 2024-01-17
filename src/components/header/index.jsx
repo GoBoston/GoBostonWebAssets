@@ -34,7 +34,7 @@ const Header = (props) => {
       <header
         className={`header mt-40  ${navbar ? "is-sticky bg-dark-1" : ""}`}
       >
-        <div className="header__container container">
+        <div className="header__container container ">
           <div className="row justify-between items-center">
             <div className="col-auto">
               <div className="d-flex items-center">
@@ -104,6 +104,7 @@ const Header = (props) => {
         </div>
         {/* End header_container */}
       </header>
+      <div className="mt-40"></div>
       {/* End header */}
     </>
   );

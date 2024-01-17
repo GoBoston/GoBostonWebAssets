@@ -13,13 +13,7 @@ const CategoriesMegaMenu = ({ setIsActiveParent }) => {
   const [activeNestedMenu, setActiveNestedMenu] = useState(0);
 
   const itemList = [
-    "Hotel",
-    "Tour",
-    "Activity",
-    "Holiday Re1111ntals",
-    "Car",
-    "Cruise",
-    "Flights",
+    "О Бостоне",
   ];
 
   useEffect(() => {
@@ -46,15 +40,6 @@ const CategoriesMegaMenu = ({ setIsActiveParent }) => {
             key={i}
             onClick={() => setActiveNestedMenu(i)}
           >
-            <button
-              className={`tabs__button text-light-1 fw-500 js-tabs-button ${
-                activeNestedMenu == i
-                  ? "nested-menu-active"
-                  : "nested-menu-inactive"
-              } `}
-            >
-              {item}
-            </button>
           </div>
         ))}
       </div>

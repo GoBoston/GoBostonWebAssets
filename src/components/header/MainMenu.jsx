@@ -1,14 +1,7 @@
 import { Link } from "react-router-dom";
 
-import {
-  homeItems,
-  blogItems,
-  pageItems,
-  dashboardItems,
-} from "../../data/mainMenuData";
 import CategoriesMegaMenu from "./CategoriesMegaMenu";
 import {
-  isActiveParent,
   isActiveLink,
   isActiveParentChaild,
 } from "../../utils/linkActiveChecker";
@@ -23,11 +16,9 @@ const MainMenu = ({ style = "" }) => {
     <nav className="menu js-navList">
       <ul className={`menu__nav ${style} -is-active`}>
         <li
-          className={`${
-            isActiveParentChaild(homeItems, pathname) ? "current" : ""
-          } menu-item-has-children`}
+          className={`menu-item-has-children`}
         >
-          <a href="#">
+          <a href="/">
             <span className="mr-10">Главная</span>
             <i className="icon" />
           </a>
@@ -46,29 +37,36 @@ const MainMenu = ({ style = "" }) => {
         </li>
         {/* End home page menu */}
 
+        
         <li
-          className={
-            isActiveParent
-              ? "menu-item-has-children -has-mega-menu current"
-              : "menu-item-has-children -has-mega-menu"
-          }
+          className={`menu-item-has-children`}
         >
-          <a href="#">
-            <span className="mr-10">Популярные Места</span>
+          <a href="/boston">
+            <span className="mr-10">О Бостоне</span>
             <i className="icon icon-chevron-sm-down" />
           </a>
-          <div className="mega">
-            <CategoriesMegaMenu setIsActiveParent={setIsActiveParent} />
-          </div>
+          <ul className="subnav">
+            {[
+              {name: 'Университеты', routePath: '/boston/universities'},
+              {name: 'События', routePath: '/boston/events'},
+              {name: 'Достопримечательности', routePath: '/boston/attractions'}
+            ].map((menu, i) => (
+              <li
+                key={i}
+                className={
+                  isActiveLink(menu.routePath, pathname) ? "current" : ""
+                }
+              >
+                <Link to={menu.routePath}>{menu.name}</Link>
+              </li>
+            ))}
+          </ul>
         </li>
-        {/* End categories menu items */}
-
+        {/* End blogIems */}
         
 
         <li
-          className={`${
-            isActiveParentChaild(blogItems, pathname) ? "current" : ""
-          } menu-item-has-children`}
+          className={`menu-item-has-children`}
         >
           <a href="/">
             <span className="mr-10">Поездки</span>
@@ -76,8 +74,8 @@ const MainMenu = ({ style = "" }) => {
           </a>
           <ul className="subnav">
             {[
-              {name: 'Предстоящие', routePath: '/'},
-              {name: 'Прошедшие', routePath: '/'}
+              {name: 'Предстоящие', routePath: '/trips/upcoming'},
+              {name: 'Прошедшие', routePath: '/trips/past'}
             ].map((menu, i) => (
               <li
                 key={i}
@@ -98,7 +96,7 @@ const MainMenu = ({ style = "" }) => {
         {/* End Destinatinos single menu */}
 
         <li className={pathname === "/destinations" ? "current" : ""}>
-          <Link to="/destinations">Оставить заявку</Link>
+          <Link to="/apply">Оставить заявку</Link>
         </li>
         {/* End Destinatinos single menu */}
 
