@@ -12,8 +12,8 @@ const FilterHotels = () => {
     slidesToScroll: 1,
   };
 
-  
-  
+
+
 
   // custom navigation
   function ArrowSlick(props) {
@@ -61,8 +61,8 @@ const FilterHotels = () => {
                   prevArrow={<ArrowSlick type="prev" />}
                 >
                   {item?.slideImg?.map((slide, i) => (
-                    <div className="cardImage ratio ratio-1:1" key={i}>
-                      <div className="cardImage__content ">
+                    <div width="100%" height="100%" className="cardImage ratio ratio-1:1" key={i}>
+                      <div width="100%" height="100%" className="cardImage__content ">
                         <img
                           className="rounded-4 col-12 js-lazy"
                           src={slide}
@@ -89,7 +89,7 @@ const FilterHotels = () => {
                       isTextMatched(item?.tag, "best seller")
                         ? "bg-blue-1 text-white"
                         : ""
-                    } 
+                    }
                     } ${
                       isTextMatched(item?.tag, "-25% today")
                         ? "bg-brown-1 text-white"
@@ -108,12 +108,16 @@ const FilterHotels = () => {
             </div>
             <div className="hotelsCard__content mt-10">
               <h4 className="hotelsCard__title text-dark-1 text-18 lh-16 fw-500">
-                <span>{item?.title}</span>
+                <span>{item?.dates}: {item?.title}, {item?.location}</span>
+                <p className="text-light-1 lh-18 text-14 mt-5">
+                  {item?.name}
+                </p>
               </h4>
-              <p className="text-light-1 lh-14 text-14 mt-5">
-                {item?.location}
-              </p>
-              
+
+              <div className="text-20 lh-16 text-light-1 mt-10 md:mt-5">
+                {item.details}
+              </div>
+
             </div>
           </Link>
         </div>
