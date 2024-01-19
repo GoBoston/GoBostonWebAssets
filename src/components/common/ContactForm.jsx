@@ -1,26 +1,45 @@
 import React from "react";
+import trips from "@/data/trips";
 
 const ContactForm = () => {
   const [showModal, setShowModal] = React.useState(false);
-const [formDataJson, setFormDataJson] = React.useState('');
+  const [formDataJson, setFormDataJson] = React.useState('');
+  const [phoneNumberError, setPhoneNumberError] = React.useState('');
 
-const handleSubmit = (event) => {
-  event.preventDefault();
+  const handleSubmit = (event) => {
+    event.preventDefault();
 
-  // Extracting values directly from the DOM
-  const formData = {
-    name: document.getElementById('name').value,
-    email: document.getElementById('email').value,
-    phoneNumber: document.getElementById('phonenumber').value,
-    school: document.getElementById('school').value,
-    grade: document.getElementById('grade').value,
-    tour: document.getElementById('tour').value,
-    message: document.getElementById('message').value
-  };
+    // Get the phone number element
+    const phoneNumberElement = document.getElementById('phonenumber');
 
-  // Set the form data JSON and show the modal
-  setFormDataJson(JSON.stringify(formData, null, 2));
-  setShowModal(true);
+    // Check if the phone number element exists
+    if (phoneNumberElement) {
+      const phoneNumber = phoneNumberElement.value;
+      if (!phoneNumber.startsWith('+7')) {
+        setPhoneNumberError('Phone number must start with +7.');
+        return;
+      }
+
+      // Reset phone number error if the validation passes
+      setPhoneNumberError('');
+
+      // Extracting values directly from the DOM
+      const formData = {
+        name: document.getElementById('name').value,
+        email: document.getElementById('email').value,
+        phoneNumber: phoneNumber,
+        school: document.getElementById('school').value,
+        grade: document.getElementById('grade').value,
+        tour: document.getElementById('tour').value,
+        message: document.getElementById('message').value
+      };
+
+      // Set the form data JSON and show the modal
+      setFormDataJson(JSON.stringify(formData, null, 2));
+      setShowModal(true);
+    } else {
+      console.error('Phone number field not found');
+    }
   };
 
   return (
@@ -53,16 +72,23 @@ const handleSubmit = (event) => {
             <label htmlFor="phonenumber" className="lh-1 text-16 text-light-1">
               Номер телефона
             </label>
+            {phoneNumberError && <div className="text-danger">{phoneNumberError}</div>}
           </div>
         </div>
       </div>
       <div class="row justify-content-start">
         <div className="col-6 offset-md-3">
+        <label>Школа</label>
           <div className="form-input">
-            <input type="text" id="school" required />
-            <label htmlFor="schools" className="lh-1 text-16 text-light-1">
-              Школа
-            </label>
+            <select id="school" className="form-select" required>
+              <option value="NIS">NIS</option>
+              <option value="FIZMAT">FIZMAT</option>
+              <option value="BIL">BIL</option>
+              <option value="Haileybury">Haileybury</option>
+              <option value="Other Public School">Other Public School</option>
+              <option value="Other Private School">Other Private School</option>
+            </select>
+
           </div>
         </div>
       </div>
@@ -78,11 +104,13 @@ const handleSubmit = (event) => {
       </div>
       <div class="row justify-content-start">
         <div className="col-6 offset-md-3">
+          <label>Тур</label>
           <div className="form-input">
-            <input type="text" id="tour" required />
-            <label htmlFor="tour" className="lh-1 text-16 text-light-1">
-              Выбранный тур
-            </label>
+          <select id="tour" className="form-select" required>
+          {trips.slice(0, 8).map((item) => (
+            <option value={item.name}>{item.name}</option>
+          ))}
+          </select>
           </div>
         </div>
       </div>
