@@ -2,19 +2,10 @@ const Block1 = () => {
   return (
     <>
       <div className="col-lg-5">
-        <h2 className="text-30 fw-600">About GoTrip.com</h2>
-        <p className="mt-5">These popular destinations have a lot to offer</p>
+        <h2 className="text-30 fw-600">Наша команда</h2>
+        <p className="mt-5">Наша команда состоит из трёх студентов-энтузиастов, бывших победителей международных олимпиад по математике.</p>
         <p className="text-dark-1 mt-60 lg:mt-40 md:mt-20">
-          London is a shining example of a metropolis at the highest peak of
-          modernity and boasts an economy and cultural diversity that’s the envy
-          of other global superpowers.
-          <br />
-          <br />
-          Take the opportunity to acquaint yourself with its fascinating history
-          chronicled by institutions like the British Museum as well as see how
-          far it has come by simply riding the Tube and passing by celebrated
-          landmarks like Buckingham Palace, Westminster Abbey, and marvels like
-          Big Ben, the London Eye, and the Tower Bridge.
+          Сейчас Данияр и Аружан учатся в Бостоне, в университетах Suffolk University и MIT: Данияр — по специальности программист, Аружан — по специальности математик. Алмас учится в КБТУ и параллельно работает в собственном образовательном центре “A+”. В своё время мы все имели замечательную возможность посещать другие страны для участия в интеллектуальных соревнованиях. Этот опыт не только помог нам поступить в хорошие вузы и получить в них стипендии, но и очень поспособствовал нашему личностному росту. Поэтому мы решили, что больше школьников в Казахстане должно иметь такую возможность, и в 2015 году впервые организовали поездку команды от Казахстана на соревнование по математике Harvard MIT Math Competition в Бостон. С тех пор мы ежегодно возим детей в Америку на интеллектуальные мероприятия, в ходе чего показываем им лучшие университеты мира, такие как Harvard, MIT, Princeton, Yale, Columbia, Cornell, устраиваем им встречи с успешными людьми в сфере образования и науки, работниками крупных американских компаний, а также организовываем приятный досуг в виде экскурсий по различным научным выставкам и музеям, а также шопинга в крупных дискаунт центрах.
         </p>
       </div>
       {/* End .col */}
