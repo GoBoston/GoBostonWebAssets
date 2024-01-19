@@ -5,10 +5,6 @@ const TestimonialRating = () => {
         Что наши клиенты
         <br /> говорят о нас?
       </h2>
-      <p className="text-white mt-20">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas varius
-        tortor nibh, sit amet tempor nibh finibus et. Aenean eu enim justo.
-      </p>
 
       <div className="row y-gap-30 text-white pt-60 lg:pt-40">
         <div className="col-sm-5 col-6">
