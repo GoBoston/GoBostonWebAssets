@@ -9,7 +9,10 @@ import {
   categorieMobileItems,
   categorieMegaMenuItems,
 } from "../../data/mainMenuData";
-import { isActiveLink } from "../../utils/linkActiveChecker";
+import {
+  isActiveLink,
+  isActiveParentChaild,
+} from "../../utils/linkActiveChecker";
 import Social from "../common/social/Social";
 import ContactInfo from "./ContactInfo";
 import { useNavigate } from "react-router-dom";
@@ -61,169 +64,72 @@ const MobileMenu = () => {
 
       <Sidebar width="400" backgroundColor="#fff">
         <Menu>
-          <SubMenu
-            label="Home"
-            className={
-              homeItems.some(
-                (item) =>
-                  item.routePath?.split("/")[1] == pathname.split("/")[1],
-              )
-                ? "menu-active-link"
-                : ""
-            }
-          >
-            {homeItems.map((item, i) => (
-              <MenuItem
-                key={i}
-                onClick={() => navigate(item.routePath)}
-                className={
-                  isActiveLink(item.routePath, pathname)
-                    ? "menu-active-link"
-                    : "inactive-menu"
-                }
-              >
-                {item.name}
-              </MenuItem>
-            ))}
-          </SubMenu>
-          {/* End  All Home Menu */}
-
-          <SubMenu
-            label="Categories"
-            className={isActiveParent ? "menu-active-link" : ""}
-          >
-            {categorieMobileItems.map((item) => (
-              <SubMenu
-                label={item.title}
-                key={item.id}
-                className={
-                  isActiveNestedParent == item.id
-                    ? "menu-active-link"
-                    : "inactive-menu"
-                }
-              >
-                {item.menuItems.map((single) => (
-                  <SubMenu
-                    label={single.title}
-                    key={single.id}
-                    className={
-                      isActiveNestedParentTwo == single.title
-                        ? "menu-active-link"
-                        : "inactive-menu"
-                    }
-                  >
-                    {single.menuList.map((menu, i) => (
-                      <MenuItem
-                        key={i}
-                        onClick={() => navigate(menu.routePath)}
-                        className={
-                          isActiveLink(menu.routePath, pathname)
-                            ? "menu-active-link"
-                            : "inactive-menu"
-                        }
-                      >
-                        {menu.name}
-                      </MenuItem>
-                    ))}
-                  </SubMenu>
-                ))}
-              </SubMenu>
-            ))}
-          </SubMenu>
-          {/* End  All Categories Menu */}
-
           <MenuItem
-            onClick={() => navigate("/destinations")}
-            className={pathname === "/destinations" ? "menu-active-link" : ""}
+            onClick={() => navigate("/")}
+            className={pathname === "/destinations" ? "current" : ""}
           >
-            Desitinations
+            Главная
           </MenuItem>
-          {/* End  Desitinations Menu */}
-
           <SubMenu
-            label="Blog"
-            className={
-              blogItems.some(
-                (item) =>
-                  item.routePath?.split("/")[1] == pathname.split("/")[1],
-              )
-                ? "menu-active-link"
-                : ""
-            }
-          >
-            {blogItems.map((item, i) => (
+              label="О Бостоне"
+              className={pathname === "/destinations" ? "current" : ""}
+            >
               <MenuItem
-                key={i}
-                onClick={() => navigate(item.routePath)}
-                className={
-                  isActiveLink(item.routePath, pathname)
-                    ? "menu-active-link"
-                    : "inactive-menu"
-                }
+                key="1"
+                onClick={() => navigate("/boston/universities")}
+                className={pathname === "/destinations" ? "current" : ""}
               >
-                {item.name}
+              Университеты
               </MenuItem>
-            ))}
+              <MenuItem
+                key="2"
+                onClick={() => navigate("/boston/events")}
+                className={pathname === "/destinations" ? "current" : ""}
+              >
+              События
+              </MenuItem>
+              <MenuItem
+                key="3"
+                onClick={() => navigate("/boston/attractions")}
+                className={pathname === "/destinations" ? "current" : ""}
+              >
+              Достопримечательности
+              </MenuItem>
           </SubMenu>
-          {/* End  All Blog Menu */}
-
           <SubMenu
-            label="Pages"
-            className={
-              pageItems.some(
-                (item) =>
-                  item.routePath?.split("/")[1] == pathname.split("/")[1],
-              )
-                ? "menu-active-link"
-                : ""
-            }
+            label="Поездки"
+            className={pathname === "/destinations" ? "current" : ""}
           >
-            {pageItems.map((item, i) => (
               <MenuItem
-                key={i}
-                onClick={() => navigate(item.routePath)}
-                className={
-                  isActiveLink(item.routePath, pathname)
-                    ? "menu-active-link"
-                    : "inactive-menu"
-                }
+                key="1"
+                onClick={() => navigate("/trips/upcoming")}
+                className={pathname === "/destinations" ? "current" : ""}
               >
-                {item.name}
+              Предстоящие
               </MenuItem>
-            ))}
+              <MenuItem
+                key="2"
+                onClick={() => navigate("/trips/past")}
+                className={pathname === "/destinations" ? "current" : ""}
+              >
+              Предыдущие
+              </MenuItem>
           </SubMenu>
           {/* End  All Pages Menu */}
 
-          <SubMenu
-            label="Dashboard"
-            className={
-              pathname.split("/")[1] == "dashboard" ||
-              pathname.split("/")[1] == "vendor-dashboard"
-                ? "menu-active-link"
-                : ""
-            }
+          <MenuItem
+            onClick={() => navigate("/about")}
+            className={pathname === "/destinations" ? "current" : ""}
           >
-            {dashboardItems.map((item, i) => (
-              <MenuItem
-                key={i}
-                onClick={() => navigate(item.routePath)}
-                className={
-                  isActiveLink(item.routePath, pathname)
-                    ? "menu-active-link"
-                    : "inactive-menu"
-                }
-              >
-                {item.name}
-              </MenuItem>
-            ))}
-          </SubMenu>
+            О нас
+          </MenuItem>
           {/* End  All Dashboard Menu */}
 
           <MenuItem
-            onClick={() => navigate("/contact")}
-            className={pathname === "/contact" ? "menu-active-link" : ""}
+            onClick={() => navigate("/apply")}
+            className={pathname === "/destinations" ? "current" : ""}
           >
-            Contact
+            Оставить заявку
           </MenuItem>
           {/* End Contact  Menu */}
         </Menu>

@@ -37,7 +37,7 @@ const MainMenu = ({ style = "" }) => {
         </li>
         {/* End home page menu */}
 
-        
+
         <li
           className={`menu-item-has-children`}
         >
@@ -63,7 +63,7 @@ const MainMenu = ({ style = "" }) => {
           </ul>
         </li>
         {/* End blogIems */}
-        
+
 
         <li
           className={`menu-item-has-children`}
