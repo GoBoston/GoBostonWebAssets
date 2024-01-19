@@ -17,7 +17,7 @@ const Index = () => {
         <div className="masthead__tabs">
           <div className="tabs -bookmark-2 js-tabs">
             <div className="tabs__controls d-flex items-center js-tabs-controls">
-              
+
             </div>
           </div>
           {/* End tabs */}
@@ -30,7 +30,7 @@ const Index = () => {
               <h1 className="z-2 text-60 lg:text-40 md:text-30 text-white pt-80 xl:pt-0">
                 Развиваемся
                 <br />
-                <span className="text-yellow-1">В Пути</span> 
+                <span className="text-yellow-1">В Пути</span>
               </h1>
               <p className="z-2 text-white mt-20">
                 Образовательные поездки в Америку для школьников
