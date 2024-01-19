@@ -1,10 +1,10 @@
-import CallToActions from "@/components/common/CallToActions";
+import CallToActions from "@/components/home/home-2/CallToActions";
 
-import WhyChoose from "@/components/block/BlockGuide";
+import WhyChooseUs from "@/components/about/WhyChooseUs";
 import Block1 from "@/components/about/Block1";
 
 import Counter from "@/components/counter/Counter";
-import Team1 from "@/components/team/Team1";
+import News from "@/components/about/News";
 import Testimonial from "@/components/testimonial/Testimonial";
 import Counter2 from "@/components/counter/Counter2";
 import Brand from "@/components/brand/Brand";
@@ -14,8 +14,8 @@ import MetaComponent from "@/components/common/MetaComponent";
 import Header from "@/components/header";
 
 const metadata = {
-  title: "About || GoTrip - Travel & Tour ReactJs Template",
-  description: "GoTrip - Travel & Tour ReactJs Template",
+  title: "Главная страница || GoBoston - Развиваемся в пути",
+  description: "GoBoston - Развиваемся в пути",
 };
 
 const About = () => {
@@ -40,40 +40,14 @@ const About = () => {
           <div className="row justify-center text-center">
             <div className="col-xl-6 col-lg-8 col-md-10">
               <h1 className="text-40 md:text-25 fw-600 text-white">
-                Looking for joy?
+                GoBoston — это компания которая организовывает образовательные поездки для школьников в Америку.
               </h1>
-              <div className="text-white mt-15">
-                Your trusted trip companion
-              </div>
             </div>
           </div>
         </div>
         {/* End .container */}
       </section>
       {/* End About Banner Section */}
-
-      <section className="layout-pt-lg layout-pb-md">
-        <div className="container">
-          <div className="row justify-center text-center">
-            <div className="col-auto">
-              <div className="sectionTitle -md">
-                <h2 className="sectionTitle__title">Why Choose Us</h2>
-                <p className=" sectionTitle__text mt-5 sm:mt-0">
-                  These popular destinations have a lot to offer
-                </p>
-              </div>
-            </div>
-          </div>
-          {/* End .row */}
-
-          <div className="row y-gap-40 justify-between pt-50">
-            <WhyChoose />
-          </div>
-          {/* End .row */}
-        </div>
-        {/* End .container */}
-      </section>
-      {/* End Why Choose Us section */}
 
       <section className="layout-pt-md">
         <div className="container">
@@ -84,26 +58,12 @@ const About = () => {
       </section>
       {/* End about block section */}
 
-      <section className="pt-60">
-        <div className="container">
-          <div className="border-bottom-light pb-40">
-            <div className="row y-gap-30 justify-center text-center">
-              <Counter />
-            </div>
-          </div>
-        </div>
-      </section>
-      {/* End counter Section */}
-
       <section className="layout-pt-lg layout-pb-lg">
         <div className="container">
           <div className="row y-gap-20 justify-between items-end">
             <div className="col-auto">
               <div className="sectionTitle -md">
-                <h2 className="sectionTitle__title">Our Team</h2>
-                <p className=" sectionTitle__text mt-5 sm:mt-0">
-                  Lorem ipsum dolor sit amet
-                </p>
+                <h2 className="sectionTitle__title">О нас в СМИ</h2>
               </div>
             </div>
           </div>
@@ -111,7 +71,7 @@ const About = () => {
 
           <div className=" pt-40 js-section-slider">
             <div className="item_gap-x30">
-              <Team1 />
+              <News />
             </div>
           </div>
           {/* End  js-section-slider */}
@@ -127,11 +87,8 @@ const About = () => {
             <div className="col-auto">
               <div className="sectionTitle -md">
                 <h2 className="sectionTitle__title">
-                  Overheard from travelers
+                  Отзывы наших клиентов
                 </h2>
-                <p className=" sectionTitle__text mt-5 sm:mt-0">
-                  These popular destinations have a lot to offer
-                </p>
               </div>
             </div>
           </div>
@@ -144,19 +101,6 @@ const About = () => {
           </div>
           {/* End .overflow-hidden */}
 
-          <div className="row y-gap-30 items-center pt-40 sm:pt-20">
-            <div className="col-xl-4">
-              <Counter2 />
-            </div>
-            {/* End .col */}
-
-            <div className="col-xl-8">
-              <div className="row y-gap-30 justify-between items-center">
-                <Brand />
-              </div>
-            </div>
-            {/* End .col */}
-          </div>
           {/* End .row */}
         </div>
         {/* End .container */}
