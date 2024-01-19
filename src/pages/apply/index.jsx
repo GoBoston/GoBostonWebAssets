@@ -1,7 +1,7 @@
-import Footer2 from "@/components/footer/footer-2";
-import Header from "@/components/header";
 import CallToActions from "@/components/home/home-2/CallToActions";
-import FilterHotels3 from "@/components/hotels/FilterHotels3";
+import Header from "@/components/header";
+import Footer2 from "@/components/footer/footer-2";
+import ContactForm from "@/components/common/ContactForm";
 
 import MetaComponent from "@/components/common/MetaComponent";
 
@@ -15,23 +15,14 @@ const Apply = () => {
     <>
       <MetaComponent meta={metadata} />
       {/* End Page Title */}
-
-      <Header noScroll/>
+      <Header noScroll={false}/>
       {/* End Header 2 */}
-      
+      <ContactForm />
 
-
-
-      <div>Apply</div>
-      <div>Apply</div>
-      <div>Apply</div>
-      <div>Apply</div>
-      <div>Apply</div>
-
-
+      {/* End contact section form */}
 
       <CallToActions />
-      {/* End CallToActions Section */}
+      {/* End Call To Actions Section */}
 
       <Footer2 />
       {/* End Footer Section */}
