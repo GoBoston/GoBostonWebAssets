@@ -20,7 +20,7 @@ const trips = [
         deadline: '10/10/2024',
         details: {
             name: 'Олимпиада по математике',
-            duration: '12 дней',                
+            duration: '12 дней',
             groupSize: '10 человек',
             departingCity: 'Алматы',
             arrivingCity: 'Нью-Йорк',

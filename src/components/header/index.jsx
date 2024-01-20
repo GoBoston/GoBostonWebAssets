@@ -17,7 +17,7 @@ const Header = (props) => {
       if (props.noScroll !== undefined){
         setNavbar(true);
       }
-      
+
     }
   };
 

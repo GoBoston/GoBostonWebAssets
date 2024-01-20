@@ -80,7 +80,7 @@ const LocationSearch = () => {
                         {item.name}
                       </div>
                       <div className="text-14 lh-12 text-light-1 mt-5">
-                        {item.dates}
+                        {item.dates.start} - {item.dates.end}
                       </div>
                     </div>
                   </div>
