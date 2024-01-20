@@ -1,5 +1,6 @@
 import React from "react";
 import trips from "@/data/trips";
+import schools from "@/data/schools";
 
 const ContactForm = () => {
   const [showModal, setShowModal] = React.useState(false);
@@ -81,10 +82,9 @@ const ContactForm = () => {
         <label>Школа</label>
           <div className="form-input">
             <select id="school" className="form-select" required>
-              <option value="NIS">NIS</option>
-              <option value="FIZMAT">FIZMAT</option>
-              <option value="BIL">BIL</option>
-              <option value="Haileybury">Haileybury</option>
+            {schools.map((item) => (
+              <option value={item.name}>{item.name}</option>
+            ))}
               <option value="Other Public School">Other Public School</option>
               <option value="Other Private School">Other Private School</option>
             </select>

@@ -1,20 +1,33 @@
 import FilterBox from "./filter-box";
+import { useState, useEffect } from "react";
+import getCost from "@/utils/costCalculator";
 
-const SidebarRight = ({ activity }) => {
+const SidebarRight = ({ trip }) => {
+  const [cost, setCost] = useState({ usd: 0, kzt: 0 });
+
+    useEffect(() => {
+        const fetchCost = async () => {
+            const costData = await getCost(trip.cost.default);
+            setCost(costData);
+        };
+
+        fetchCost();
+    }, [trip.cost.default]); // dependency array ensures this runs only when trip.cost.default changes
+
   return (
     <div className="d-flex justify-end js-pin-content">
       <div className="w-360 lg:w-full d-flex flex-column items-center">
         <div className="px-30 py-30 rounded-4 border-light bg-white shadow-4">
           <div className="text-14 text-light-1">
-            From{" "}
+            Стоимость: {" "}
             <span className="text-20 fw-500 text-dark-1 ml-5">
-              US${activity?.price}
+              {cost.usd}$ ({cost.kzt} KZT)
             </span>
           </div>
           {/* End div */}
 
           <div className="row y-gap-20 pt-30">
-            <FilterBox />
+            <FilterBox trip={trip}/>
           </div>
           {/* End div */}
 
@@ -23,19 +36,11 @@ const SidebarRight = ({ activity }) => {
               <i className="icon-heart text-16 text-green-2" />
             </div>
             <div className="text-14 lh-16 ml-10">
-              94% of travelers recommend this experience
+              Заявки принимаются до {trip.deadline}
             </div>
           </div>
         </div>
         {/* End px-30 */}
-
-        <div className="px-30">
-          <div className="text-14 text-light-1 mt-30">
-            Not sure? You can cancel this reservation up to 24 hours in advance
-            for a full refund.
-          </div>
-        </div>
-        {/* End div */}
       </div>
     </div>
   );

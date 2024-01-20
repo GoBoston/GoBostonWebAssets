@@ -15,7 +15,7 @@ const Apply = () => {
     <>
       <MetaComponent meta={metadata} />
       {/* End Page Title */}
-      <Header noScroll={false}/>
+      <Header noScroll />
       {/* End Header 2 */}
       <ContactForm />
 

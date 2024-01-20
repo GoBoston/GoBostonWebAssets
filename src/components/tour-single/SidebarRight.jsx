@@ -31,8 +31,7 @@ const SidebarRight = ({ tour }) => {
 
         <div className="px-30">
           <div className="text-14 text-light-1 mt-30">
-            Not sure? You can cancel this reservation up to 24 hours in advance
-            for a full refund.
+            123
           </div>
         </div>
         {/* End div */}

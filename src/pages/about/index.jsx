@@ -6,9 +6,7 @@ import Block1 from "@/components/about/Block1";
 import Counter from "@/components/counter/Counter";
 import News from "@/components/about/News";
 import Testimonial from "@/components/testimonial/Testimonial";
-import Counter2 from "@/components/counter/Counter2";
-import Brand from "@/components/brand/Brand";
-import DefaultFooter from "@/components/footer/default"
+import Footer2 from "@/components/footer/footer-2";
 
 import MetaComponent from "@/components/common/MetaComponent";
 import Header from "@/components/header";
@@ -110,7 +108,7 @@ const About = () => {
       <CallToActions />
       {/* End Call To Actions Section */}
 
-      <DefaultFooter />
+      <Footer2 />
       {/* End Call To Actions Section */}
     </>
   );
