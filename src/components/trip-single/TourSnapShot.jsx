@@ -1,12 +1,12 @@
-const TourSnapShot = () => {
+const TourSnapShot = ({trip}) => {
   return (
     <div className="row y-gap-30 justify-between pt-20">
       <div className="col-md-auto col-6">
         <div className="d-flex">
           <i className="icon-clock text-22 text-blue-1 mr-10"></i>
           <div className="text-15 lh-15">
-            Duration:
-            <br /> 11h
+            Продолжительность:
+            <br /> {trip.details.duration}
           </div>
         </div>
       </div>
@@ -16,8 +16,8 @@ const TourSnapShot = () => {
         <div className="d-flex">
           <i className="icon-customer text-22 text-blue-1 mr-10"></i>
           <div className="text-15 lh-15">
-            Group size:
-            <br /> 52
+            Размер группы:
+            <br /> {trip.details.groupSize}
           </div>
         </div>
       </div>
@@ -27,8 +27,8 @@ const TourSnapShot = () => {
         <div className="d-flex">
           <i className="icon-route text-22 text-blue-1 mr-10"></i>
           <div className="text-15 lh-15">
-            Near public
-            <br /> transportation
+            Отправной город
+            <br /> {trip.details.departingCity}
           </div>
         </div>
       </div>
@@ -36,12 +36,11 @@ const TourSnapShot = () => {
 
       <div className="col-md-auto col-6">
         <div className="d-flex">
-          <i className="icon-access-denied text-22 text-blue-1 mr-10"></i>
+          <i className="icon-globe text-22 text-blue-1 mr-10"></i>
           <div className="text-15 lh-15">
-            Free cancellation <br />
-            <a href="#" className="text-blue-1 underline">
-              Learn more
-            </a>
+            Город прибытия <br />
+            
+            {trip.details.arrivingCity}
           </div>
         </div>
       </div>

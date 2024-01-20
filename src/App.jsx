@@ -23,7 +23,6 @@ import Home from "./pages";
 import TripUpcoming from "./pages/trips/tripsUpcoming/tripUpcoming"
 import About from "./pages/about";
 import TripsUpcoming from "./pages/trips/tripsUpcoming/tripsUpcomingAll"
-import TripsAll from "./pages/trips/tripsAll";
 import TripsPastAll from "./pages/trips/tripsPast/tripsPastAll";
 import TripPast from "./pages/trips/tripsPast/tripPast";
 import Attractions from "./pages/boston/attractions/attractionsAll";
@@ -53,7 +52,7 @@ function App() {
               <Route index element={<Home />} />
 
               <Route path="trips">
-                <Route path="" element={<TripsAll />} />
+                <Route path="" element={<TripsUpcoming />} />
                 <Route path="upcoming">
                   <Route path="" element={<TripsUpcoming />} />
                   <Route path=":id" element={<TripUpcoming />} />
