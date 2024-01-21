@@ -8,19 +8,11 @@ import Header from "@/components/header";
 import Overview from "@/components/trip-single/Overview";
 import TourSnapShot from "@/components/trip-single/TourSnapShot";
 import SidebarRight from "@/components/trip-single/SidebarRight";
-import ReviewProgress2 from "@/components/trip-single/guest-reviews/ReviewProgress2";
-import DetailsReview2 from "@/components/trip-single/guest-reviews/DetailsReview2";
-import ReplyForm from "@/components/trip-single/ReplyForm";
-import ReplyFormReview2 from "@/components/trip-single/ReplyFormReview2";
-import CallToActions from "@/components/common/CallToActions";
-import DefaultFooter from "@/components/footer/default";
-import Tours from "@/components/tours/Tours";
+import Footer2 from "@/components/footer/footer-2";
 import Faq from "@/components/faq/Faq";
 import { Link, useParams } from "react-router-dom";
 import ImportantInfo from "@/components/trip-single/ImportantInfo";
 import SlideGallery from "@/components/trip-single/SlideGallery";
-import MapPropertyFinder from "@/components/trip-single/MapPropertyFinder";
-
 import MetaComponent from "@/components/common/MetaComponent";
 
 const metadata = {
@@ -31,8 +23,7 @@ const metadata = {
 const TripUpcoming = () => {
   let params = useParams();
   const id = params.id;
-  const trip =
-    trips.find((item) => item.id == id) || trips[0];
+  const trip = trips.find((item) => item.id == id) || trips[0];
 
   return (
     <>
@@ -59,73 +50,25 @@ const TripUpcoming = () => {
             <div className="col-xl-8">
               <div className="row y-gap-20 justify-between items-end">
                 <div className="col-auto">
-                  <h1 className="text-26 fw-600">{trip?.title}</h1>
+                  <h1 className="text-26 fw-600">{trip.details.name}</h1>
                   <div className="row x-gap-10 y-gap-20 items-center pt-10">
-                    <div className="col-auto">
-                      <div className="d-flex items-center">
-                        <i className="icon-star text-10 text-yellow-1"></i>
-
-                        <div className="text-14 text-light-1 ml-10">
-                          <span className="text-15 fw-500 text-dark-1">
-                            {trip?.ratings}
-                          </span>
-                          {trip?.numberOffReviews} reviews
-                        </div>
-                      </div>
-                    </div>
                     {/* End .col */}
 
-                    <div className="col-auto">
-                      <div className="row x-gap-10 items-center">
-                        <div className="col-auto">
-                          <div className="d-flex x-gap-5 items-center">
-                            <i className="icon-location-2 text-16 text-light-1"></i>
-                            <div className="text-15 text-light-1">
-                              {trip?.location}
-                            </div>
-                          </div>
-                        </div>
-
-                        <div className="col-auto">
-                          <button className="text-blue-1 text-15 underline">
-                            Show on map
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                    {/* End .col */}
                   </div>
                   {/* End .row */}
                 </div>
                 {/* End .col */}
 
-                <div className="col-auto">
-                  <div className="row x-gap-10 y-gap-10">
-                    <div className="col-auto">
-                      <button className="button px-15 py-10 -blue-1">
-                        <i className="icon-share mr-10"></i>
-                        Share
-                      </button>
-                    </div>
-
-                    <div className="col-auto">
-                      <button className="button px-15 py-10 -blue-1 bg-light-2">
-                        <i className="icon-heart mr-10"></i>
-                        Save
-                      </button>
-                    </div>
-                  </div>
-                </div>
-                {/* End .col */}
+                
               </div>
               {/* End .row */}
 
-              <h3 className="text-22 fw-500 mt-40">Tour snapshot</h3>
-              <TourSnapShot />
+              <h3 className="text-22 fw-500 mt-40">Краткая информация</h3>
+              <TourSnapShot trip={trip} />
               {/* End toursnapshot */}
               <div className="border-top-light mt-40 mb-40"></div>
 
-              <Overview />
+              <Overview trip={trip} />
               {/* End  Overview */}
             </div>
             {/* End .col-xl-8 */}
@@ -146,11 +89,11 @@ const TripUpcoming = () => {
           <div className="pt-40 border-top-light">
             <div className="row x-gap-40 y-gap-40">
               <div className="col-auto">
-                <h3 className="text-22 fw-500">Important information</h3>
+                <h3 className="text-22 fw-500">Программа поездки</h3>
               </div>
             </div>
             {/* End row */}
-            <ImportantInfo />
+            <ImportantInfo trip={trip}/>
           </div>
           {/* End pt-40 */}
         </div>
@@ -158,15 +101,7 @@ const TripUpcoming = () => {
       </section>
       {/* End important info */}
 
-      <section className="border-top-light  mt-40 pt-40">
-        <div className="container">
-          <h3 className="text-22 fw-500 mb-20">Activity&apos;s Location</h3>
-          <div className=" rounded-4 overflow-hidden map-500">
-            <MapPropertyFinder />
-          </div>
-        </div>
-      </section>
-      {/* End Itinerary */}
+
 
       <section className="mt-40">
         <div className="container ">
@@ -174,18 +109,18 @@ const TripUpcoming = () => {
             <div className="row y-gap-20">
               <div className="col-lg-4">
                 <h2 className="text-22 fw-500">
-                  FAQs about
-                  <br /> The Crown Hotel
+                  Часто задаваемые 
+                  <br /> вопросы
                 </h2>
               </div>
               {/* End .row */}
 
-              <div className="col-lg-8">
+              <div className="col-lg-8 mb-40">
                 <div
                   className="accordion -simple row y-gap-20 js-accordion"
                   id="Faq1"
                 >
-                  <Faq />
+                  <Faq trip={trip}/>
                 </div>
               </div>
               {/* End .col */}
@@ -198,96 +133,8 @@ const TripUpcoming = () => {
       </section>
       {/* End Faq about sections */}
 
-      <section className="mt-40 border-top-light pt-40">
-        <div className="container">
-          <div className="row y-gap-40 justify-between">
-            <div className="col-xl-3">
-              <h3 className="text-22 fw-500">Guest reviews</h3>
-              <ReviewProgress2 />
-              {/* End review with progress */}
-            </div>
-            {/* End col-xl-3 */}
 
-            <div className="col-xl-8">
-              <DetailsReview2 />
-            </div>
-            {/* End col-xl-8 */}
-          </div>
-          {/* End .row */}
-        </div>
-        {/* End .container */}
-        {/* End container */}
-      </section>
-      {/* End Review section */}
-
-      <section className="mt-40 border-top-light pt-40">
-        <div className="container">
-          <div className="row y-gap-30 justify-between">
-            <div className="col-xl-3">
-              <div className="row">
-                <div className="col-auto">
-                  <h3 className="text-22 fw-500">Leave a Reply</h3>
-                  <p className="text-15 text-dark-1 mt-5">
-                    Your email address will not be published.
-                  </p>
-                </div>
-              </div>
-              {/* End .row */}
-
-              <ReplyFormReview2 />
-              {/* End ReplyFormReview */}
-            </div>
-            {/* End .col-xl-3 */}
-
-            <div className="col-xl-8">
-              <ReplyForm />
-            </div>
-            {/* End .col-xl-8 */}
-          </div>
-          {/* End .row */}
-        </div>
-        {/* End .container */}
-      </section>
-      {/* End Reply Comment box section */}
-
-      <section className="layout-pt-lg layout-pb-lg mt-50 border-top-light">
-        <div className="container">
-          <div className="row y-gap-20 justify-between items-end">
-            <div className="col-auto">
-              <div className="sectionTitle -md">
-                <h2 className="sectionTitle__title">Most Popular Tours</h2>
-                <p className=" sectionTitle__text mt-5 sm:mt-0">
-                  Interdum et malesuada fames ac ante ipsum
-                </p>
-              </div>
-            </div>
-            {/* End .col */}
-
-            <div className="col-auto">
-              <Link
-                to="#"
-                className="button -md -blue-1 bg-blue-1-05 text-blue-1"
-              >
-                More <div className="icon-arrow-top-right ml-15" />
-              </Link>
-            </div>
-            {/* End .col */}
-          </div>
-          {/* End .row */}
-
-          <div className="row y-gap-30 pt-40 sm:pt-20 item_gap-x30">
-            <Tours />
-          </div>
-          {/* End .row */}
-        </div>
-        {/* End .container */}
-      </section>
-      {/* End Tours Sections */}
-
-      <CallToActions />
-      {/* End Call To Actions Section */}
-
-      <DefaultFooter />
+      <Footer2 />
     </>
   );
 };

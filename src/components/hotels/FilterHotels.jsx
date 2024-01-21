@@ -108,16 +108,15 @@ const FilterHotels = () => {
             </div>
             <div className="hotelsCard__content mt-10">
               <h4 className="hotelsCard__title text-dark-1 text-18 lh-16 fw-500">
-                <span>{item?.dates}: {item?.title}, {item?.location}</span>
+                <span>{item?.dates.start} - {item?.dates.end}: {item?.title}, {item?.location}</span>
                 <p className="text-light-1 lh-18 text-14 mt-5">
                   {item?.name}
                 </p>
               </h4>
-
               <div className="text-20 lh-16 text-light-1 mt-10 md:mt-5">
-                {item.details}
+                {item.details.info[0]}
               </div>
-
+              
             </div>
           </Link>
         </div>

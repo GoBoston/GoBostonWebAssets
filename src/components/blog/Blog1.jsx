@@ -27,27 +27,13 @@ const Blog1 = () => {
   return (
     <>
       <div className="tabs -pills-3 pt-30 js-tabs">
-        <div className="tabs__controls row x-gap-10 justify-center js-tabs-controls">
-          {filterOptions.map((option) => (
-            <div className="col-auto" key={option.value}>
-              <button
-                className={`tabs__button text-14 fw-500 px-20 py-10 rounded-4 bg-light-2 js-tabs-button ${
-                  filterOption === option.value ? "is-tab-el-active" : ""
-                }`}
-                onClick={() => setFilterOption(option.value)}
-              >
-                {option.label}
-              </button>
-            </div>
-          ))}
-        </div>
         {/* End tab-controls */}
 
         <div className="row y-gap-30 pt-30">
           {filteredItems.slice(0, 9).map((item) => (
             <div className="col-lg-4 col-sm-6" key={item.id}>
               <Link
-                to={`/blog-details/${item.id}`}
+                to={`/trips/past/${item.id}`}
                 className="blogCard -type-1 d-block "
               >
                 <div className="blogCard__image">
@@ -70,8 +56,6 @@ const Blog1 = () => {
           ))}
         </div>
         {/* End .row */}
-
-        <BlogPagination />
       </div>
     </>
   );

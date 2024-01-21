@@ -25,7 +25,8 @@ const Home = () => {
       {/* End Header 2 */}
 
       <Hero />
-      {/* End Hero 2 */}
+      {/* End Hero 1 */}
+
 
       <section className="layout-pt-lg layout-pb-md">
         <div className="container">
@@ -68,7 +69,7 @@ const Home = () => {
                   Прошедшие поездки
                 </h2>
                 <p className=" sectionTitle__text mt-5 sm:mt-0">
-                  Каждая поездка запоминается нам и нашим ученикам по-особенному. 
+                  Каждая поездка запоминается нам и нашим ученикам по-особенному.
                   Именно поэтому мы храним архив всех поездок.
                 </p>
               </div>

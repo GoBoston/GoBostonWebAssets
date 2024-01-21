@@ -32,7 +32,7 @@ const blogs = [
   },
   {
     id: 4,
-    img: "/img/blog/3.png",
+    img: "/img/blog/1.png",
     title: "Harvard-MIT 2018",
     date: "Jan 06, 2023",
     delayAnimation: "300",
