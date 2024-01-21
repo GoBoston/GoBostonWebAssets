@@ -5,8 +5,9 @@ import blogs from "@/data/blogs";
 import Header from "@/components/header";
 
 
-import Overview from "@/components/trip-single/Overview";
+import Overview from "@/components/blog/BlogOverview";
 import CallToActions from "@/components/home/home-2/CallToActions";
+import Footer2 from "@/components/footer/footer-2";
 import DefaultFooter from "@/components/footer/default";
 import { Link, useParams } from "react-router-dom";
 import SlideGallery from "@/components/trip-single/SlideGallery";
@@ -72,7 +73,7 @@ const TripPast = () => {
       <CallToActions />
       {/* End Call To Actions Section */}
 
-      <DefaultFooter />
+      <Footer2 />
     </>
   );
 };
