@@ -15,10 +15,10 @@ const TripsUpcoming = () => {
       <MetaComponent meta={metadata} />
       {/* End Page Title */}
 
-      // <Header noScroll/>
-      // {/* End Header 2 */}
+      <Header noScroll/>
+      {/* End Header 2 */}
 
-          <FilterHotels3 />
+      <FilterHotels3 />
 
 
       {/* End Best Seller Hotels Sections */}
