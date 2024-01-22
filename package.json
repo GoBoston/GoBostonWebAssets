@@ -3,11 +3,14 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://goboston.github.io/GoBostonWebAssets",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@faker-js/faker": "^8.2.0",
@@ -16,6 +19,7 @@
     "aos": "^2.3.4",
     "bootstrap": "^5.2.3",
     "chart.js": "^4.4.0",
+    "gh-pages": "^6.1.1",
     "google-map-react": "^2.2.1",
     "netlify-cli": "^17.15.1",
     "photoswipe": "^5.4.2",
