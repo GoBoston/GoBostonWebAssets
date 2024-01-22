@@ -1,7 +1,7 @@
 import Footer2 from "@/components/footer/footer-2";
 import Header from "@/components/header";
 import CallToActions from "@/components/home/home-2/CallToActions";
-import Blog1 from "@/components/attractions/attraction"
+import Attraction from "@/components/attractions/attraction"
 
 import MetaComponent from "@/components/common/MetaComponent";
 
@@ -31,7 +31,7 @@ const Attractions = () => {
                </div>
              </div>
            </div>
-           <Blog1 />
+           <Attraction />
          </div>
        </section>
 

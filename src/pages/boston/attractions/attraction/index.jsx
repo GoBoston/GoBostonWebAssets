@@ -2,7 +2,7 @@ import Footer2 from "@/components/footer/footer-2";
 import Header from "@/components/header";
 import CallToActions from "@/components/home/home-2/CallToActions";
 import { useParams } from "react-router-dom";
-import Overview from "@/components/attractions/BlogOverview";
+import Overview from "@/components/attractions/AttractionOverview";
 
 
 import MetaComponent from "@/components/common/MetaComponent";
