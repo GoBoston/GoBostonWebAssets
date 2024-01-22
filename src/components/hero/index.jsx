@@ -1,5 +1,4 @@
 import { useSelector, useDispatch } from "react-redux";
-import { addCurrentTab } from "../../features/hero/findPlaceSlice";
 import MainFilterSearchBox from "./MainFilterSearchBox";
 
 const Index = () => {

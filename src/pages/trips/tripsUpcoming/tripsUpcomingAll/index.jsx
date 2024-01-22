@@ -2,7 +2,6 @@ import Footer2 from "@/components/footer/footer-2";
 import Header from "@/components/header";
 import CallToActions from "@/components/home/home-2/CallToActions";
 import FilterHotels3 from "@/components/hotels/FilterHotels3";
-import Blog1 from "@/components/blog/Blog1";
 import MetaComponent from "@/components/common/MetaComponent";
 
 const metadata = {

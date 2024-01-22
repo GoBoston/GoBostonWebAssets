@@ -8,7 +8,7 @@ import Header from "@/components/header";
 import Overview from "@/components/trip-single/TripOverview";
 import CallToActions from "@/components/home/home-2/CallToActions";
 import Footer2 from "@/components/footer/footer-2";
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import SlideGallery from "@/components/trip-single/SlideGallery";
 
 import MetaComponent from "@/components/common/MetaComponent";
