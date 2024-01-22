@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://goboston.github.io/GoBostonWebAssets/",
+  "homepage": "https://goboston.github.io/GoBostonWebAssets",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
