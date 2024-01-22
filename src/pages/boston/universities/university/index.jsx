@@ -2,11 +2,10 @@ import Footer2 from "@/components/footer/footer-2";
 import Header from "@/components/header";
 import CallToActions from "@/components/home/home-2/CallToActions";
 import { useParams } from "react-router-dom";
-import SlideGallery from "@/components/trip-single/SlideGallery";
 
 import MetaComponent from "@/components/common/MetaComponent";
 import universities from "@/data/universities";
-import Overview from "@/components/universities/BlogOverview";
+import Overview from "@/components/universities/UniversityOverview";
 
 const metadata = {
   title: "Главная страница || GoBoston - Развиваемся в пути",

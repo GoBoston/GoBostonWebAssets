@@ -1,28 +1,7 @@
 import { Link } from "react-router-dom";
-import { useEffect, useState } from "react";
 import universityData from "../../data/universities";
-import BlogPagination from "./BlogPagination";
 
-const Blog1 = () => {
-  const [filterOption, setFilterOption] = useState("art_culture");
-  const [filteredItems, setFilteredItems] = useState([]);
-
-  useEffect(() => {
-    setFilteredItems(
-      universityData.filter((elm) => elm.tags?.includes(filterOption)),
-    );
-  }, [filterOption]);
-  console.log(filteredItems)
-  const filterOptions = [
-    { label: "Art and culture", value: "art_culture" },
-    { label: "Beaches", value: "beaches" },
-    { label: "Adventure travel", value: "adventure_travel" },
-    { label: "Explore", value: "explore" },
-    { label: "Family holidays", value: "family_holidays" },
-    { label: "Air travel", value: "air_travel" },
-    { label: "Food and drink", value: "food_drink" },
-    // add more options as needed
-  ];
+const University = () => {
 
   return (
     <>
@@ -59,4 +38,4 @@ const Blog1 = () => {
   );
 };
 
-export default Blog1;
+export default University;
