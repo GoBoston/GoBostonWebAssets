@@ -10,14 +10,14 @@ import TourSnapShot from "@/components/trip-single/TourSnapShot";
 import SidebarRight from "@/components/trip-single/SidebarRight";
 import Footer2 from "@/components/footer/footer-2";
 import Faq from "@/components/faq/Faq";
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import ImportantInfo from "@/components/trip-single/ImportantInfo";
 import SlideGallery from "@/components/trip-single/SlideGallery";
 import MetaComponent from "@/components/common/MetaComponent";
 
 const metadata = {
-  title: "Activity Single || GoTrip - Travel & Tour ReactJs Template",
-  description: "GoTrip - Travel & Tour ReactJs Template",
+  title: "Главная страница || GoBoston - Развиваемся в пути",
+  description: "GoBoston - Развиваемся в пути",
 };
 
 const TripUpcoming = () => {

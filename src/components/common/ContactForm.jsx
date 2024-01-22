@@ -46,7 +46,7 @@ const ContactForm = () => {
   return (
     <section className="layout-pt-md layout-pb-lg">
     <form className="row y-gap-20 pt-30" onSubmit={handleSubmit}>
-      <div class="row justify-content-start">
+      <div className="row justify-content-start">
         <div className="col-6 offset-md-3">
           <div className="form-input">
             <input type="text" id="name" required />
@@ -56,7 +56,7 @@ const ContactForm = () => {
           </div>
         </div>
       </div>
-      <div class="row justify-content-start">
+      <div className="row justify-content-start">
         <div className="col-6 offset-md-3">
           <div className="form-input">
             <input type="email" id="email" required />
@@ -66,7 +66,7 @@ const ContactForm = () => {
           </div>
         </div>
       </div>
-      <div class="row justify-content-start">
+      <div className="row justify-content-start">
         <div className="col-6 offset-md-3">
           <div className="form-input">
             <input type="text" id="phonenumber" required />
@@ -77,7 +77,7 @@ const ContactForm = () => {
           </div>
         </div>
       </div>
-      <div class="row justify-content-start">
+      <div className="row justify-content-start">
         <div className="col-6 offset-md-3">
         <label>Школа</label>
           <div className="form-input">
@@ -92,7 +92,7 @@ const ContactForm = () => {
           </div>
         </div>
       </div>
-      <div class="row justify-content-start">
+      <div className="row justify-content-start">
         <div className="col-6 offset-md-3">
           <div className="form-input">
             <input type="text" id="grade" required />
@@ -102,7 +102,7 @@ const ContactForm = () => {
           </div>
         </div>
       </div>
-      <div class="row justify-content-start">
+      <div className="row justify-content-start">
         <div className="col-6 offset-md-3">
           <label>Тур</label>
           <div className="form-input">
@@ -114,7 +114,7 @@ const ContactForm = () => {
           </div>
         </div>
       </div>
-      <div class="row justify-content-start">
+      <div className="row justify-content-start">
         <div className="col-6 offset-md-3">
           <div className="form-input">
             <textarea id="message" required rows="4"></textarea>

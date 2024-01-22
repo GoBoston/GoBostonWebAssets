@@ -1,13 +1,8 @@
 import CallToActions from "@/components/home/home-2/CallToActions";
-
-import WhyChooseUs from "@/components/about/WhyChooseUs";
 import Block1 from "@/components/about/Block1";
-
-import Counter from "@/components/counter/Counter";
 import News from "@/components/about/News";
 import Testimonial from "@/components/testimonial/Testimonial";
 import Footer2 from "@/components/footer/footer-2";
-
 import MetaComponent from "@/components/common/MetaComponent";
 import Header from "@/components/header";
 
