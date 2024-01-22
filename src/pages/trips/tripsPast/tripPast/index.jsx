@@ -1,14 +1,13 @@
 import "photoswipe/dist/photoswipe.css";
 
-import blogs from "@/data/blogs";
+import { pastTrips } from "@/data/trips.js";
 
 import Header from "@/components/header";
 
 
-import Overview from "@/components/blog/BlogOverview";
+import Overview from "@/components/trip-single/TripOverview";
 import CallToActions from "@/components/home/home-2/CallToActions";
 import Footer2 from "@/components/footer/footer-2";
-import DefaultFooter from "@/components/footer/default";
 import { Link, useParams } from "react-router-dom";
 import SlideGallery from "@/components/trip-single/SlideGallery";
 
@@ -23,7 +22,7 @@ const TripPast = () => {
   let params = useParams();
   const id = params.id;
   const trip =
-    blogs.find((item) => item.id == id) || blogs[0];
+  pastTrips.find((item) => item.id == id) || blogs[0];
 
   return (
     <>

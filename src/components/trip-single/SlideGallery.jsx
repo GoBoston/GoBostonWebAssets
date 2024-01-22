@@ -2,14 +2,14 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper";
 import { Gallery, Item } from "react-photoswipe-gallery";
 import { Link, useParams } from "react-router-dom";
-import blogs from "@/data/blogs";
+import { pastTrips } from "@/data/trips.js";
 
 const SlideGallery = () => {
   let params = useParams();
   const id = params.id;
   const trip =
-    blogs.find((item) => item.id == id)
-  const sliderImg = trip.img
+  pastTrips.find((item) => item.id == id)
+  const sliderImg = trip.slideImg
 
   return (
     <>
