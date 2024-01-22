@@ -66,7 +66,7 @@ function App() {
               <Route path="boston">
                 <Route path="universities">
                   <Route path="" element={<Universities />} />
-                  <Route path=":name" element={<University />} />
+                  <Route path=":id" element={<University />} />
                 </Route>
 
                 <Route path="events">
@@ -83,7 +83,7 @@ function App() {
               <Route path="about" element={<About />} />
 
               <Route path="apply" element={<Apply />} />
-              
+
             </Route>
           </Routes>
           <ScrollTopBehaviour />
