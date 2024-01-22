@@ -1,28 +1,7 @@
 import { Link } from "react-router-dom";
-import { useEffect, useState } from "react";
 import eventData from "../../data/events";
 
-const Blog1 = () => {
-  const [filterOption, setFilterOption] = useState("art_culture");
-  const [filteredItems, setFilteredItems] = useState([]);
-
-  useEffect(() => {
-    setFilteredItems(
-      eventData.filter((elm) => elm.tags?.includes(filterOption)),
-    );
-  }, [filterOption]);
-  console.log(filteredItems)
-  const filterOptions = [
-    { label: "Art and culture", value: "art_culture" },
-    { label: "Beaches", value: "beaches" },
-    { label: "Adventure travel", value: "adventure_travel" },
-    { label: "Explore", value: "explore" },
-    { label: "Family holidays", value: "family_holidays" },
-    { label: "Air travel", value: "air_travel" },
-    { label: "Food and drink", value: "food_drink" },
-    // add more options as needed
-  ];
-
+const Event = () => {
   return (
     <>
       <div className="tabs -pills-3 pt-30 js-tabs">
@@ -59,4 +38,4 @@ const Blog1 = () => {
   );
 };
 
-export default Blog1;
+export default Event;

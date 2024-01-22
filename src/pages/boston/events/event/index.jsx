@@ -5,7 +5,7 @@ import { useParams } from "react-router-dom";
 
 import MetaComponent from "@/components/common/MetaComponent";
 import events from "@/data/events";
-import Overview from "@/components/events/BlogOverview";
+import Overview from "@/components/events/EventOverview";
 
 const metadata = {
   title: "Главная страница || GoBoston - Развиваемся в пути",
