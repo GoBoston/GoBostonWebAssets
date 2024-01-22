@@ -1,7 +1,7 @@
 import Footer2 from "@/components/footer/footer-2";
 import Header from "@/components/header";
 import CallToActions from "@/components/home/home-2/CallToActions";
-import Blog1 from "@/components/blog/Blog1";
+import TripPast from "@/components/trip-single/TripPast";
 
 import MetaComponent from "@/components/common/MetaComponent";
 
@@ -32,7 +32,7 @@ const TripsPastAll = () => {
               </div>
             </div>
           </div>
-          <Blog1 />
+          <TripPast />
         </div>
       </section>
 
