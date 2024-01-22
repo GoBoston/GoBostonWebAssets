@@ -1,7 +1,7 @@
 import Footer2 from "@/components/footer/footer-2";
 import Header from "@/components/header";
 import CallToActions from "@/components/home/home-2/CallToActions";
-import FilterHotels3 from "@/components/hotels/FilterHotels3";
+import Attraction from "@/components/attractions/attraction"
 
 import MetaComponent from "@/components/common/MetaComponent";
 
@@ -22,12 +22,18 @@ const Attractions = () => {
 
 
 
-      <div>Attractions All</div>
-      <div>Attractions All</div>
-      <div>Attractions All</div>
-      <div>Attractions All</div>
-      <div>Attractions All</div>
-      <div>Attractions All</div>
+      <section className="layout-pt-md layout-pb-lg">
+         <div className="container">
+           <div className="row justify-center text-center">
+             <div className="col-auto">
+               <div className="sectionTitle -md">
+                 <h2 className="sectionTitle__title">Достопримечательности Бостона</h2>
+               </div>
+             </div>
+           </div>
+           <Attraction />
+         </div>
+       </section>
 
 
 
