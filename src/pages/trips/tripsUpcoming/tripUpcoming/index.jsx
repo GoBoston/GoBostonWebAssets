@@ -12,7 +12,7 @@ import Footer2 from "@/components/footer/footer-2";
 import Faq from "@/components/faq/Faq";
 import { useParams } from "react-router-dom";
 import ImportantInfo from "@/components/trip-single/ImportantInfo";
-import SlideGallery from "@/components/trip-single/SlideGallery";
+import SlideGalleryUpcomingTrip from "@/components/trip-single/SlideGalleryUpcomingTrip";
 import MetaComponent from "@/components/common/MetaComponent";
 
 const metadata = {
@@ -39,7 +39,7 @@ const TripUpcoming = () => {
 
       <section className="pt-40">
         <div className="container">
-          <SlideGallery />
+          <SlideGalleryUpcomingTrip />
         </div>
       </section>
       {/* End gallery grid wrapper */}

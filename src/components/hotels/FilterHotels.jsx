@@ -49,7 +49,7 @@ const FilterHotels = () => {
           data-aos-delay={item.delayAnimation}
         >
           <Link
-            to={`/trips/${item.id}`}
+            to={`/trips/upcoming/${item.id}`}
             className="hotelsCard -type-1 hover-inside-slider"
           >
             <div className="hotelsCard__image">
@@ -72,12 +72,6 @@ const FilterHotels = () => {
                     </div>
                   ))}
                 </Slider>
-
-                <div className="cardImage__wishlist">
-                  <button className="button -blue-1 bg-white size-30 rounded-full shadow-2">
-                    <i className="icon-heart text-12" />
-                  </button>
-                </div>
 
                 <div className="cardImage__leftBadge">
                   <div

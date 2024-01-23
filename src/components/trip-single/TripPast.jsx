@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { pastTrips } from "../../data/trips.js";
+import TripPagination from "./TripPagination";
 
 const TripPast = () => {
   const [filterOption, setFilterOption] = useState("art_culture");
@@ -38,6 +39,7 @@ const TripPast = () => {
           ))}
         </div>
         {/* End .row */}
+        <TripPagination />
       </div>
     </>
   );

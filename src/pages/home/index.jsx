@@ -1,4 +1,4 @@
-import Blog4 from "@/components/blog/Blog4";
+
 import Footer2 from "@/components/footer/footer-2";
 import Header from "@/components/header";
 import Hero from "@/components/hero";
@@ -7,6 +7,7 @@ import CallToActions from "@/components/home/home-2/CallToActions";
 import Testimonial from "@/components/home/home-2/Testimonial";
 import TestimonialRating from "@/components/home/home-2/TestimonialRating";
 import FilterHotels3 from "@/components/hotels/FilterHotels3";
+import TripPast from "@/components/trip-single/TripPast";
 
 import MetaComponent from "@/components/common/MetaComponent";
 
@@ -77,7 +78,7 @@ const Home = () => {
           </div>
           {/* End .row  */}
           <div className="row y-gap-30 pt-40">
-            <Blog4 />
+            <TripPast />
           </div>
           {/* End .row */}
         </div>

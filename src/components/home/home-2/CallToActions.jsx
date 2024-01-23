@@ -19,7 +19,7 @@ const CallToActions = () => {
             <div className="row x-gap-20 y-gap-20">
               <div className="col-auto">
                 <Link
-                  to="/login"
+                  to="/trips/upcoming"
                   className="button px-40 h-60 -blue-1 text-blue-1 border-blue-1"
                 >
                   Поездки
@@ -30,7 +30,7 @@ const CallToActions = () => {
 
               <div className="col-auto">
                 <Link
-                  to="/signup"
+                  to="https://wa.me/+77771796886"
                   className="button px-40 h-60 -blue-1 bg-yellow-1 text-dark-1"
                 >
                   Написать в Whatsapp
