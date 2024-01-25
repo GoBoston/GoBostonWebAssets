@@ -1,5 +1,6 @@
 import CallToActions from "@/components/home/home-2/CallToActions";
 import Block1 from "@/components/about/Block1";
+import Block2 from "@/components/about/Block2";
 import News from "@/components/about/News";
 import Testimonial from "@/components/testimonial/Testimonial";
 import Footer2 from "@/components/footer/footer-2";
@@ -51,25 +52,12 @@ const About = () => {
       </section>
       {/* End about block section */}
 
-      <section className="layout-pt-lg layout-pb-lg">
+      <section className="layout-pt-md">
         <div className="container">
-          <div className="row y-gap-20 justify-between items-end">
-            <div className="col-auto">
-              <div className="sectionTitle -md">
-                <h2 className="sectionTitle__title">О нас в СМИ</h2>
-              </div>
-            </div>
+          <div className="row y-gap-30 justify-between items-center">
+            <Block2 />
           </div>
-          {/* End .row */}
-
-          <div className=" pt-40 js-section-slider">
-            <div className="item_gap-x30">
-              <News />
-            </div>
-          </div>
-          {/* End  js-section-slider */}
         </div>
-        {/* End container */}
       </section>
       {/* End team section */}
 

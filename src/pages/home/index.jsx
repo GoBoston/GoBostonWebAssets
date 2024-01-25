@@ -22,14 +22,14 @@ const Home = () => {
       <MetaComponent meta={metadata} />
       {/* End Page Title */}
 
-      <Header noScroll={false}/>
+      <Header/>
       {/* End Header 2 */}
 
       <Hero />
       {/* End Hero 1 */}
 
 
-      <section className="layout-pt-lg layout-pb-md">
+      <section className="layout-pt-lg layout-pb-md bg-dark-3">
         <div className="container">
           <div className="row y-gap-40 sm:y-gap-10 justify-between">
             <BlockGuide />

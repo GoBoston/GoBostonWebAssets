@@ -1,11 +1,8 @@
 import { Link } from "react-router-dom";
-import { useEffect, useState } from "react";
 import { pastTrips } from "../../data/trips.js";
-import TripPagination from "./TripPagination";
 
 const TripPast = () => {
-  const [filterOption, setFilterOption] = useState("art_culture");
-  const [filteredItems, setFilteredItems] = useState([]);
+  console.log(pastTrips.reverse().slice(0, 6))
 
   return (
     <>
@@ -13,7 +10,7 @@ const TripPast = () => {
         {/* End tab-controls */}
 
         <div className="row y-gap-30 pt-30">
-          {pastTrips.slice(0, 9).map((item) => (
+          {pastTrips.reverse().slice(0, 6).map((item) => (
             <div className="col-lg-4 col-sm-6" key={item.id}>
               <Link
                 to={`/trips/past/${item.id}`}
@@ -39,7 +36,6 @@ const TripPast = () => {
           ))}
         </div>
         {/* End .row */}
-        <TripPagination />
       </div>
     </>
   );

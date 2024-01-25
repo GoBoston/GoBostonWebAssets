@@ -27,7 +27,7 @@ const BlockGuide = () => {
     <>
       {blockContent.map((item) => (
         <div
-          className="col-lg-4 col-sm-6"
+          className="col-lg-4 col-sm-6 "
           data-aos="fade"
           data-aos-delay={item.delayAnim}
           key={item.id}
@@ -37,8 +37,8 @@ const BlockGuide = () => {
               <img src={item.icon} alt="image" className="js-lazy" />
             </div>
             <div className="text-center mt-30">
-              <h4 className="text-18 fw-500">{item.title}</h4>
-              <p className="text-15 mt-10">{item.text}</p>
+              <h4 className="text-18 fw-500 text-white">{item.title}</h4>
+              <p className="text-15 mt-10 text-white">{item.text}</p>
             </div>
           </div>
         </div>
