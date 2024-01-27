@@ -43,7 +43,7 @@ const TripPast = () => {
       </section>
       {/* End gallery grid wrapper */}
 
-      <section className="pt-40 js-pin-container">
+      <section className="pt-40 js-pin-container layout-pt-md layout-pb-lg">
         <div className="container">
           <div className="row y-gap-30">
             <div className="col-xl-8">

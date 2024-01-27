@@ -10,7 +10,7 @@ const footercontent = [
   },
   {
     id: 2,
-    title: "О нас",
+    title: "Дополнительно",
     menuList: [
       { name: "О нас", routerPath: "/" },
       { name: "Наши любимые места", routerPath: "/" },

@@ -9,7 +9,7 @@ const ContactInfo = () => {
     {
       id: 2,
       title: "instagram",
-      action: "mailto:xyz@abc.com",
+      action: "https://instagram.com/goboston.kz",
       text: "@goboston.kz",
     },
   ];

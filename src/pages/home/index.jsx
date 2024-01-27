@@ -1,4 +1,4 @@
-import Blog4 from "@/components/blog/Blog4";
+
 import Footer2 from "@/components/footer/footer-2";
 import Header from "@/components/header";
 import Hero from "@/components/hero";
@@ -7,6 +7,7 @@ import CallToActions from "@/components/home/home-2/CallToActions";
 import Testimonial from "@/components/home/home-2/Testimonial";
 import TestimonialRating from "@/components/home/home-2/TestimonialRating";
 import FilterHotels3 from "@/components/hotels/FilterHotels3";
+import TripPast from "@/components/trip-single/TripPast";
 
 import MetaComponent from "@/components/common/MetaComponent";
 
@@ -21,14 +22,14 @@ const Home = () => {
       <MetaComponent meta={metadata} />
       {/* End Page Title */}
 
-      <Header noScroll={false}/>
+      <Header/>
       {/* End Header 2 */}
 
       <Hero />
       {/* End Hero 1 */}
 
 
-      <section className="layout-pt-lg layout-pb-md">
+      <section className="layout-pt-lg layout-pb-md bg-dark-3">
         <div className="container">
           <div className="row y-gap-40 sm:y-gap-10 justify-between">
             <BlockGuide />
@@ -77,7 +78,7 @@ const Home = () => {
           </div>
           {/* End .row  */}
           <div className="row y-gap-30 pt-40">
-            <Blog4 />
+            <TripPast />
           </div>
           {/* End .row */}
         </div>

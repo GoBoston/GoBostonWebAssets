@@ -56,25 +56,10 @@ const Header = (props) => {
                   </div>
                 </div>
                 {/* End header-menu */}
-
-                <div className="d-flex items-center ml-24 is-menu-opened-hide md:d-none">
-                  <button
-                    className="text-26 xl:text-20 text-white icon-search"
-                    data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvasTop2"
-                    aria-controls="offcanvasTop2"
-                  ></button>
-                </div>
                 {/* End Search Icon */}
 
                 {/* Start mobile menu icon */}
                 <div className="d-none xl:d-flex x-gap-20 items-center pl-20 text-white">
-                  <div>
-                    <Link
-                      to="/login"
-                      className="d-flex items-center icon-user text-inherit text-22"
-                    />
-                  </div>
                   <div>
                     <button
                       className="d-flex items-center icon-menu text-inherit text-20"
