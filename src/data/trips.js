@@ -3,7 +3,7 @@ const upcomingTrips = [
         id: 1,
         slideImg: ["/img/trips/1.png", "/img/university/2.png", "/img/university/1.png", "/img/university/5.png"],
         img: "/img/trips/1.png",
-        name: '',
+        name: 'Тур по Университетам',
         dates: {
             start: '23/06/2024',
             end: '02/07/2024',

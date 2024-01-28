@@ -145,13 +145,13 @@
 }
 
 .searchMenu-date {
-  position: relative;
+  // position: relative;
 
-  &.-left {
-    .searchMenu-date__field {
-      transform: none !important;
-    }
-  }
+  // &.-left {
+  //   .searchMenu-date__field {
+  //     transform: none !important;
+  //   }
+  // }
 
   &.-right {
     .searchMenu-date__field {

@@ -2,8 +2,6 @@ import { Link } from "react-router-dom";
 import { pastTrips } from "../../data/trips.js";
 
 const TripPast = () => {
-  console.log(pastTrips.reverse().slice(0, 6))
-
   return (
     <>
       <div className="tabs -pills-3 pt-30 js-tabs">

@@ -37,7 +37,7 @@ const MobileMenu = () => {
     <>
       <div className="pro-header d-flex align-items-center justify-between border-bottom-light">
         <Link to="/">
-          <img src="/img/general/logo-dark.svg" alt="brand" />
+          <img src="/img/general/logo.png" alt="brand" />
         </Link>
         {/* End logo */}
 

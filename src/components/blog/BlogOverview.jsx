@@ -4,9 +4,7 @@ import { useParams } from "react-router-dom";
 const Overview = () => {
   let params = useParams();
   const id = params.id;
-  console.log(pastTrips)
   const trip = pastTrips.find((item) => item.id == id)
-  console.log(trip)
   return (
     <>
       <div className="row x-gap-40 y-gap-40">

@@ -1,48 +1,21 @@
 import { useState } from "react";
 import trips from '../../data/trips';
 
-const LocationSearch = () => {
+const LocationSearch = ({tripId, setTripId}) => {
   const [searchValue, setSearchValue] = useState("");
   const [selectedItem, setSelectedItem] = useState(null);
-
-  const locationSearchContent = [
-    {
-      id: 1,
-      name: "London",
-      address: "Greater London, United Kingdom",
-    },
-    {
-      id: 2,
-      name: "New York",
-      address: "New York State, United States",
-    },
-    {
-      id: 3,
-      name: "Paris",
-      address: "France",
-    },
-    {
-      id: 4,
-      name: "Madrid",
-      address: "Spain",
-    },
-    {
-      id: 5,
-      name: "Santorini",
-      address: "Greece",
-    },
-  ];
+  const [dates, setDates] = useState("");
 
   const handleOptionClick = (item) => {
-    setSearchValue(item.name);
+    setSearchValue(`${item.name}`);
     setSelectedItem(item);
+    setDates(`${item.dates.start} - ${item.dates.end}`)
+    setTripId(item.id);
   };
-
-  console.log(trips)
 
   return (
     <>
-      <div className="searchMenu-loc px-30 lg:py-20 lg:px-0 js-form-dd js-liverSearch">
+      <div className="searchMenu-loc px-30 lg:py-20 lg:px-10 js-form-dd js-liverSearch">
         <div
           data-bs-toggle="dropdown"
           data-bs-auto-close="true"
@@ -58,6 +31,9 @@ const LocationSearch = () => {
               value={searchValue}
               onChange={(e) => setSearchValue(e.target.value)}
             />
+          </div>
+          <div className="text-14 lh-12 text-light-1 mt-5">
+            {dates}
           </div>
         </div>
 
