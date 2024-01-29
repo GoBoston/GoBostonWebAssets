@@ -1,5 +1,3 @@
-import React from "react";
-// Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper";
 import { testimonial1 } from "../../../data/testimonialData";

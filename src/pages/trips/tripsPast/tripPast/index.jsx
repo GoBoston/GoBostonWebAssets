@@ -22,7 +22,7 @@ const TripPast = () => {
   let params = useParams();
   const id = params.id;
   const trip =
-  pastTrips.find((item) => item.id == id) || blogs[0];
+  pastTrips.find((item) => item.id == id) || pastTrips[0];
 
   return (
     <>

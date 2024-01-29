@@ -83,7 +83,7 @@ const ContactForm = () => {
           <div className="form-input">
             <select id="school" className="form-select" required>
             {schools.map((item) => (
-              <option value={item.name}>{item.name}</option>
+              <option key={item.id} value={item.name}>{item.name}</option>
             ))}
               <option value="Other Public School">Other Public School</option>
               <option value="Other Private School">Other Private School</option>
@@ -108,7 +108,7 @@ const ContactForm = () => {
           <div className="form-input">
           <select id="tour" className="form-select" required>
           {trips.slice(0, 8).map((item) => (
-            <option value={item.name}>{item.name}</option>
+            <option key={item.id} value={item.name}>{item.name}</option>
           ))}
           </select>
           </div>

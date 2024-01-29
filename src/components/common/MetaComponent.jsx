@@ -1,7 +1,7 @@
-import React from "react";
+import PropTypes from 'prop-types';
 import { Helmet, HelmetProvider } from "react-helmet-async";
 
-export default function MetaComponent({ meta }) {
+function MetaComponent({ meta }) {
   return (
     <HelmetProvider>
       <Helmet>
@@ -11,3 +11,13 @@ export default function MetaComponent({ meta }) {
     </HelmetProvider>
   );
 }
+
+// Prop type validation
+MetaComponent.propTypes = {
+  meta: PropTypes.shape({
+    title: PropTypes.string,
+    description: PropTypes.string
+  })
+};
+
+export default MetaComponent;

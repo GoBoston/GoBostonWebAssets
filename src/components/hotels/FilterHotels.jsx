@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import PropTypes from 'prop-types';
 import Slider from "react-slick";
 import trips from "../../data/trips";
 import isTextMatched from "../../utils/isTextMatched";
@@ -38,6 +39,10 @@ const FilterHotels = () => {
       </button>
     );
   }
+  ArrowSlick.propTypes = {
+    type: PropTypes.oneOf(['next', 'prev']).isRequired,
+    onClick: PropTypes.func.isRequired
+  };
 
   return (
     <>
@@ -118,5 +123,6 @@ const FilterHotels = () => {
     </>
   );
 };
+
 
 export default FilterHotels;

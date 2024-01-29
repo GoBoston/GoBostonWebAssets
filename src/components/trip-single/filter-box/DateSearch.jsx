@@ -1,12 +1,7 @@
 import DatePicker, { DateObject } from "react-multi-date-picker";
+import PropTypes from 'prop-types';
 
 const DateSearch = ({trip}) => {
-  // const [dates, setDates] = useState([
-  //   new DateObject({ year: 2023, month: 1, day: 22 }),
-  //   "December 09 2020",
-  //   1597994736000, //unix time in milliseconds (August 21 2020)
-  // ]);
-  console.log(trip.dates)
 
   const start = trip.dates.start.split('/');
   const end = trip.dates.end.split('/');
@@ -39,5 +34,15 @@ const DateSearch = ({trip}) => {
     </div>
   );
 };
+
+DateSearch.propTypes = {
+  trip: PropTypes.shape({
+    dates: PropTypes.shape({
+      start: PropTypes.string.isRequired,
+      end: PropTypes.string.isRequired
+    }).isRequired
+  }).isRequired
+};
+
 
 export default DateSearch;

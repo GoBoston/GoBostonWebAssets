@@ -4,15 +4,9 @@ import { Sidebar, Menu, MenuItem, SubMenu } from "react-pro-sidebar";
 
 import ContactInfo from "./ContactInfo";
 import { useNavigate } from "react-router-dom";
-import { useEffect, useState } from "react";
 
 const MobileMenu = () => {
   const { pathname } = useLocation();
-
-  const [isActiveParent, setIsActiveParent] = useState(false);
-  const [isActiveNestedParentTwo, setisActiveNestedParentTwo] = useState(false);
-  const [isActiveNestedParent, setisActiveNestedParent] = useState(false);
-
   const navigate = useNavigate();
 
   return (

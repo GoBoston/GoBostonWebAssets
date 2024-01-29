@@ -1,4 +1,3 @@
-import AppButton from "./AppButton";
 import ContactInfo from "./ContactInfo";
 import Copyright from "./Copyright";
 import FooterContent from "./FooterContent";

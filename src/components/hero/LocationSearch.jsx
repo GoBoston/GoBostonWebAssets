@@ -1,7 +1,8 @@
+import PropTypes from 'prop-types';
 import { useState } from "react";
 import trips from '../../data/trips';
 
-const LocationSearch = ({tripId, setTripId}) => {
+const LocationSearch = ({setTripId}) => {
   const [searchValue, setSearchValue] = useState("");
   const [selectedItem, setSelectedItem] = useState(null);
   const [dates, setDates] = useState("");
@@ -68,6 +69,10 @@ const LocationSearch = ({tripId, setTripId}) => {
       </div>
     </>
   );
+};
+
+LocationSearch.propTypes = {
+  setTripId: PropTypes.func.isRequired
 };
 
 export default LocationSearch;

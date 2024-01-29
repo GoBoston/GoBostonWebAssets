@@ -1,7 +1,6 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper";
-import { Gallery, Item } from "react-photoswipe-gallery";
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { pastTrips } from "@/data/trips.js";
 
 const SlideGallery = () => {

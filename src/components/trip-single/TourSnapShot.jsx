@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 const TourSnapShot = ({trip}) => {
   return (
     <div className="row y-gap-30 justify-between pt-20">
@@ -47,6 +49,17 @@ const TourSnapShot = ({trip}) => {
       {/* End .col */}
     </div>
   );
+};
+
+TourSnapShot.propTypes = {
+  trip: PropTypes.shape({
+    details: PropTypes.shape({
+      duration: PropTypes.string.isRequired,
+      groupSize: PropTypes.string.isRequired,
+      departingCity: PropTypes.string.isRequired,
+      arrivingCity: PropTypes.string.isRequired
+    }).isRequired
+  }).isRequired
 };
 
 export default TourSnapShot;

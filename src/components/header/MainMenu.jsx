@@ -1,16 +1,13 @@
 import { Link } from "react-router-dom";
+import PropTypes from 'prop-types';
 
 import {
   isActiveLink,
-  isActiveParentChaild,
 } from "../../utils/linkActiveChecker";
 import { useLocation } from "react-router-dom";
-import { useState } from "react";
 
 const MainMenu = ({ style = "" }) => {
   const { pathname } = useLocation();
-  const [isActiveParent, setIsActiveParent] = useState(false);
-
   return (
     <nav className="menu js-navList">
       <ul className={`menu__nav ${style} -is-active`}>
@@ -102,6 +99,15 @@ const MainMenu = ({ style = "" }) => {
       </ul>
     </nav>
   );
+};
+
+MainMenu.defaultProps = {
+  style: ""
+};
+
+// Prop type validation
+MainMenu.propTypes = {
+  style: PropTypes.string
 };
 
 export default MainMenu;

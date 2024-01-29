@@ -1,6 +1,7 @@
 import FilterBox from "./filter-box";
 import { useState, useEffect } from "react";
 import getCost from "@/utils/costCalculator";
+import PropTypes from 'prop-types';
 
 const SidebarRight = ({ trip }) => {
   const [cost, setCost] = useState({ usd: 0, kzt: 0 });
@@ -44,6 +45,15 @@ const SidebarRight = ({ trip }) => {
       </div>
     </div>
   );
+};
+
+SidebarRight.propTypes = {
+  trip: PropTypes.shape({
+    cost: PropTypes.shape({
+      default: PropTypes.number.isRequired
+    }).isRequired,
+    deadline: PropTypes.string.isRequired
+  }).isRequired
 };
 
 export default SidebarRight;

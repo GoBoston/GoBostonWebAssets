@@ -1,5 +1,6 @@
+import PropTypes from 'prop-types';
 import { Link } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 import MainMenu from "./MainMenu";
 import MobileMenu from "./MobileMenu";
 
@@ -10,23 +11,23 @@ const Header = (props) => {
   }
   const [navbar, setNavbar] = useState(state);
 
-  const changeBackground = () => {
+  const changeBackground = useCallback(() => {
     if (window.scrollY >= 10) {
       setNavbar(true);
     } else {
       if (props.noScroll !== undefined){
         setNavbar(true);
       }
-
     }
-  };
+  }, [props.noScroll]); // Memoize changeBackground based on props.noScroll
+
 
   useEffect(() => {
     window.addEventListener("scroll", changeBackground);
     return () => {
       window.removeEventListener("scroll", changeBackground);
     };
-  }, []);
+  }, [changeBackground]);
 
   return (
     <>
@@ -92,6 +93,10 @@ const Header = (props) => {
       {/* End header */}
     </>
   );
+};
+
+Header.propTypes = {
+  noScroll: PropTypes.bool
 };
 
 export default Header;

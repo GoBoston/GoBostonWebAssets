@@ -17,7 +17,7 @@ const Attraction = () => {
     let params = useParams();
     const id = params.id;
     const attraction =
-     attractions.find((item) => item.id == id) || events[0];
+     attractions.find((item) => item.id == id) || attractions[0];
   return (
     <>
       <MetaComponent meta={metadata} />

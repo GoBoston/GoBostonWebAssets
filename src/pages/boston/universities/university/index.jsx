@@ -16,7 +16,7 @@ const University = () => {
     let params = useParams();
     const id = params.id;
     const university =
-    universities.find((item) => item.id == id) || blogs[0];
+    universities.find((item) => item.id == id) || universities[0];
   return (
     <>
       <MetaComponent meta={metadata} />

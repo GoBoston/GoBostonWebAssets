@@ -1,10 +1,6 @@
-import { useSelector, useDispatch } from "react-redux";
 import MainFilterSearchBox from "./MainFilterSearchBox";
 
 const Index = () => {
-  const { tabs, currentTab } = useSelector((state) => state.hero) || {};
-  const dispatch = useDispatch();
-
   return (
     <section className="masthead -type-2 z-2 bg-dark-3">
       <div className="masthead__bg bg-dark-3">

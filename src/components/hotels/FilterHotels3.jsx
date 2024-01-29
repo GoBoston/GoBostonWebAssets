@@ -1,8 +1,6 @@
-import React, { useState } from "react";
 import FilterHotels from "./FilterHotels";
 
 export default function FilterHotels3() {
-  const [filterOption, setFilterOption] = useState("hotel");
   return (
     <section className="layout-pt-md layout-pb-lg">
       <div className="container">

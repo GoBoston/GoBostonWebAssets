@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import getCost from "@/utils/costCalculator";
+import PropTypes from 'prop-types';
+
 
 const Overview = ({trip}) => {
   const [cost, setCost] = useState({ usd: 0, kzt: 0 });
@@ -19,8 +21,8 @@ const Overview = ({trip}) => {
         <div className="col-12">
           <h3 className="text-22 fw-500">Описание поездки</h3>
 
-          {trip.details.info.map((paragraph) => (
-            <p className="text-dark-1 text-15 mt-20">{paragraph}</p>
+          {trip.details.info.map((paragraph, index) => (
+            <p key={index} className="text-dark-1 text-15 mt-20">{paragraph}</p>
           ))}
         </div>
 
@@ -46,8 +48,8 @@ const Overview = ({trip}) => {
 
             <div className="row x-gap-40 y-gap-40 pt-20">
               <div className="col-md-6">
-                {trip.details.included.map((point) => (
-                  <div className="text-dark-1 text-15">
+                {trip.details.included.map((point, index) => (
+                  <div key={index} className="text-dark-1 text-15">
                     <i className="icon-check text-10 mr-10"></i>
                     {point}
                   </div>
@@ -55,8 +57,8 @@ const Overview = ({trip}) => {
               </div>
 
               <div className="col-md-6">
-              {trip.details.notIncluded.map((point) => (
-                  <div className="text-dark-1 text-15">
+              {trip.details.notIncluded.map((point, index) => (
+                <div key={index} className="text-dark-1 text-15">
                   <i className="icon-close text-green-2 text-10 mr-10"></i> 
                   {point}
                 </div>
@@ -68,6 +70,23 @@ const Overview = ({trip}) => {
       </div>
     </>
   );
+};
+
+Overview.propTypes = {
+  trip: PropTypes.shape({
+    cost: PropTypes.shape({
+      default: PropTypes.number.isRequired
+    }).isRequired,
+    details: PropTypes.shape({
+      info: PropTypes.arrayOf(PropTypes.string).isRequired,
+      included: PropTypes.arrayOf(PropTypes.string).isRequired,
+      notIncluded: PropTypes.arrayOf(PropTypes.string).isRequired,
+    }).isRequired,
+    dates: PropTypes.shape({
+      start: PropTypes.string.isRequired,
+      end: PropTypes.string.isRequired
+    }).isRequired
+  }).isRequired
 };
 
 export default Overview;
