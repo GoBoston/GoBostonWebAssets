@@ -1,10 +1,9 @@
 name: Lint Code Base
 
 on:
-  push:
-    branches: [main]
   pull_request:
-    branches: [main]
+    # This will trigger the workflow for pull requests to any branch
+    branches: "*"
 
 jobs:
   build:
@@ -15,7 +14,7 @@ jobs:
       - name: Use Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: "14"
+          node-version: "14" # Specify your Node.js version here
 
       - name: Install Dependencies
         run: yarn install
