@@ -1,7 +1,7 @@
-import Wrapper from "@/components/layout/Wrapper";
 import MainHome from "./home";
 
 import MetaComponent from "@/components/common/MetaComponent";
+import Wrapper from "@/components/layout/Wrapper";
 
 const metadata = {
   title: "Главная страница || GoBoston - Развиваемся в пути",

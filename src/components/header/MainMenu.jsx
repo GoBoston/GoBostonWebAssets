@@ -1,10 +1,10 @@
+import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
-import PropTypes from 'prop-types';
+import { useLocation } from "react-router-dom";
 
 import {
   isActiveLink,
 } from "../../utils/linkActiveChecker";
-import { useLocation } from "react-router-dom";
 
 const MainMenu = ({ style = "" }) => {
   const { pathname } = useLocation();
@@ -43,9 +43,9 @@ const MainMenu = ({ style = "" }) => {
           </a>
           <ul className="subnav">
             {[
-              {name: 'Университеты', routePath: '/boston/universities'},
-              {name: 'События', routePath: '/boston/events'},
-              {name: 'Достопримечательности', routePath: '/boston/attractions'}
+              {name: "Университеты", routePath: "/boston/universities"},
+              {name: "События", routePath: "/boston/events"},
+              {name: "Достопримечательности", routePath: "/boston/attractions"}
             ].map((menu, i) => (
               <li
                 key={i}
@@ -70,8 +70,8 @@ const MainMenu = ({ style = "" }) => {
           </a>
           <ul className="subnav">
             {[
-              {name: 'Предстоящие', routePath: '/trips/upcoming'},
-              {name: 'Прошедшие', routePath: '/trips/past'}
+              {name: "Предстоящие", routePath: "/trips/upcoming"},
+              {name: "Прошедшие", routePath: "/trips/past"}
             ].map((menu, i) => (
               <li
                 key={i}

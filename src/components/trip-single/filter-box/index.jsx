@@ -1,5 +1,6 @@
-import DateSearch from "./DateSearch";
 import { Link } from "react-router-dom";
+
+import DateSearch from "./DateSearch";
 
 const index = ({trip}) => {
   return (

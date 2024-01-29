@@ -1,10 +1,10 @@
-import CallToActions from "@/components/home/home-2/CallToActions";
 import Block1 from "@/components/about/Block1";
 import Block2 from "@/components/about/Block2";
-import Testimonial from "@/components/testimonial/Testimonial";
-import Footer2 from "@/components/footer/footer-2";
 import MetaComponent from "@/components/common/MetaComponent";
+import Footer2 from "@/components/footer/footer-2";
 import Header from "@/components/header";
+import CallToActions from "@/components/home/home-2/CallToActions";
+import Testimonial from "@/components/testimonial/Testimonial";
 
 const metadata = {
   title: "Главная страница || GoBoston - Развиваемся в пути",

@@ -1,6 +1,7 @@
+import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
-import PropTypes from 'prop-types';
 import Slider from "react-slick";
+
 import trips from "../../data/trips";
 import isTextMatched from "../../utils/isTextMatched";
 
@@ -40,7 +41,7 @@ const FilterHotels = () => {
     );
   }
   ArrowSlick.propTypes = {
-    type: PropTypes.oneOf(['next', 'prev']).isRequired,
+    type: PropTypes.oneOf(["next", "prev"]).isRequired,
     onClick: PropTypes.func.isRequired
   };
 
@@ -90,14 +91,14 @@ const FilterHotels = () => {
                         : ""
                     }
                     } ${
-                      isTextMatched(item?.tag, "-25% today")
-                        ? "bg-brown-1 text-white"
-                        : ""
-                    } ${
-                       isTextMatched(item?.tag, "top rated")
-                         ? "bg-yellow-1 text-dark-1"
-                         : ""
-                    }
+        isTextMatched(item?.tag, "-25% today")
+          ? "bg-brown-1 text-white"
+          : ""
+        } ${
+          isTextMatched(item?.tag, "top rated")
+            ? "bg-yellow-1 text-dark-1"
+            : ""
+        }
                     `}
                   >
                     {item?.tag}

@@ -1,17 +1,15 @@
 import "photoswipe/dist/photoswipe.css";
 
-import { pastTrips } from "@/data/trips.js";
 
-import Header from "@/components/header";
-
-
-import Overview from "@/components/trip-single/TripOverview";
-import CallToActions from "@/components/home/home-2/CallToActions";
-import Footer2 from "@/components/footer/footer-2";
 import { useParams } from "react-router-dom";
-import SlideGallery from "@/components/trip-single/SlideGallery";
 
 import MetaComponent from "@/components/common/MetaComponent";
+import Footer2 from "@/components/footer/footer-2";
+import Header from "@/components/header";
+import CallToActions from "@/components/home/home-2/CallToActions";
+import SlideGallery from "@/components/trip-single/SlideGallery";
+import Overview from "@/components/trip-single/TripOverview";
+import { pastTrips } from "@/data/trips.js";
 
 const metadata = {
   title: "Activity Single || GoTrip - Travel & Tour ReactJs Template",

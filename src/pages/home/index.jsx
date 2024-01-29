@@ -1,4 +1,5 @@
 
+import MetaComponent from "@/components/common/MetaComponent";
 import Footer2 from "@/components/footer/footer-2";
 import Header from "@/components/header";
 import Hero from "@/components/hero";
@@ -9,7 +10,6 @@ import TestimonialRating from "@/components/home/home-2/TestimonialRating";
 import FilterHotels3 from "@/components/hotels/FilterHotels3";
 import TripPast from "@/components/trip-single/TripPast";
 
-import MetaComponent from "@/components/common/MetaComponent";
 
 const metadata = {
   title: "Главная страница || GoBoston - Развиваемся в пути",

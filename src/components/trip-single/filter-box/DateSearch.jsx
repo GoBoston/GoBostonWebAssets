@@ -1,10 +1,10 @@
+import PropTypes from "prop-types";
 import DatePicker, { DateObject } from "react-multi-date-picker";
-import PropTypes from 'prop-types';
 
 const DateSearch = ({trip}) => {
 
-  const start = trip.dates.start.split('/');
-  const end = trip.dates.end.split('/');
+  const start = trip.dates.start.split("/");
+  const end = trip.dates.end.split("/");
 
   const dates = [
     new DateObject({

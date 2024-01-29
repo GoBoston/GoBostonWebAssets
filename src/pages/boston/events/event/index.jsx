@@ -1,11 +1,11 @@
-import Footer2 from "@/components/footer/footer-2";
-import Header from "@/components/header";
-import CallToActions from "@/components/home/home-2/CallToActions";
 import { useParams } from "react-router-dom";
 
 import MetaComponent from "@/components/common/MetaComponent";
-import events from "@/data/events";
 import Overview from "@/components/events/EventOverview";
+import Footer2 from "@/components/footer/footer-2";
+import Header from "@/components/header";
+import CallToActions from "@/components/home/home-2/CallToActions";
+import events from "@/data/events";
 
 const metadata = {
   title: "Главная страница || GoBoston - Развиваемся в пути",
@@ -13,9 +13,9 @@ const metadata = {
 };
 
 const Event = () => {
-    let params = useParams();
-    const id = params.id;
-    const event =
+  let params = useParams();
+  const id = params.id;
+  const event =
     events.find((item) => item.id == id) || events[0];
   return (
     <>

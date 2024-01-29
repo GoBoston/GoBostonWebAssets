@@ -1,6 +1,7 @@
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 import { useState } from "react";
-import trips from '../../data/trips';
+
+import trips from "../../data/trips";
 
 const LocationSearch = ({setTripId}) => {
   const [searchValue, setSearchValue] = useState("");
@@ -10,7 +11,7 @@ const LocationSearch = ({setTripId}) => {
   const handleOptionClick = (item) => {
     setSearchValue(`${item.name}`);
     setSelectedItem(item);
-    setDates(`${item.dates.start} - ${item.dates.end}`)
+    setDates(`${item.dates.start} - ${item.dates.end}`);
     setTripId(item.id);
   };
 

@@ -1,4 +1,5 @@
 import Slider from "react-slick";
+
 import { testimonial1 } from "../../data/testimonialData";
 
 const Testimonial = () => {

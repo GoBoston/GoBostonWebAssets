@@ -1,6 +1,9 @@
 import Aos from "aos";
+import PropTypes from "prop-types";
 import { useEffect } from "react";
-import PropTypes from 'prop-types';
+import { Provider } from "react-redux";
+import { Link } from "react-router-dom";
+
 import SrollTop from "../components/common/ScrollTop";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -9,9 +12,7 @@ import "swiper/css/scrollbar";
 import "swiper/css/effect-cards";
 import "aos/dist/aos.css";
 import "../styles/index.scss";
-import { Provider } from "react-redux";
 import { store } from "../store/store";
-import { Link } from "react-router-dom";
 
 if (typeof window !== "undefined") {
   import("bootstrap/dist/js/bootstrap");

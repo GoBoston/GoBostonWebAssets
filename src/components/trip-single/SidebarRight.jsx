@@ -1,19 +1,22 @@
-import FilterBox from "./filter-box";
+import PropTypes from "prop-types";
 import { useState, useEffect } from "react";
+
+import FilterBox from "./filter-box";
+
 import getCost from "@/utils/costCalculator";
-import PropTypes from 'prop-types';
+
 
 const SidebarRight = ({ trip }) => {
   const [cost, setCost] = useState({ usd: 0, kzt: 0 });
 
-    useEffect(() => {
-        const fetchCost = async () => {
-            const costData = await getCost(trip.cost.default);
-            setCost(costData);
-        };
+  useEffect(() => {
+    const fetchCost = async () => {
+      const costData = await getCost(trip.cost.default);
+      setCost(costData);
+    };
 
-        fetchCost();
-    }, [trip.cost.default]); // dependency array ensures this runs only when trip.cost.default changes
+    fetchCost();
+  }, [trip.cost.default]); // dependency array ensures this runs only when trip.cost.default changes
 
   return (
     <div className="d-flex justify-end js-pin-content">

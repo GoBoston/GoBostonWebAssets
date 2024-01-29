@@ -1,19 +1,18 @@
 import "photoswipe/dist/photoswipe.css";
 
-import trips from "@/data/trips";
 
-import Header from "@/components/header";
-
-
-import Overview from "@/components/trip-single/Overview";
-import TourSnapShot from "@/components/trip-single/TourSnapShot";
-import SidebarRight from "@/components/trip-single/SidebarRight";
-import Footer2 from "@/components/footer/footer-2";
-import Faq from "@/components/faq/Faq";
 import { useParams } from "react-router-dom";
-import ImportantInfo from "@/components/trip-single/ImportantInfo";
-import SlideGalleryUpcomingTrip from "@/components/trip-single/SlideGalleryUpcomingTrip";
+
 import MetaComponent from "@/components/common/MetaComponent";
+import Faq from "@/components/faq/Faq";
+import Footer2 from "@/components/footer/footer-2";
+import Header from "@/components/header";
+import ImportantInfo from "@/components/trip-single/ImportantInfo";
+import Overview from "@/components/trip-single/Overview";
+import SidebarRight from "@/components/trip-single/SidebarRight";
+import SlideGalleryUpcomingTrip from "@/components/trip-single/SlideGalleryUpcomingTrip";
+import TourSnapShot from "@/components/trip-single/TourSnapShot";
+import trips from "@/data/trips";
 
 const metadata = {
   title: "Главная страница || GoBoston - Развиваемся в пути",

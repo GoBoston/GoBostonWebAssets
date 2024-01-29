@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 const Faq = ({trip}) => {
   return (
@@ -21,7 +21,7 @@ const Faq = ({trip}) => {
 
             <div
               className="accordion-collapse collapse"
-              id={'q'+index}
+              id={"q"+index}
               data-bs-parent="#Faq1"
             >
               <div className="pt-15 pl-60">

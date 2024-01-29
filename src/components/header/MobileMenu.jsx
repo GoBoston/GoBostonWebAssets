@@ -1,9 +1,9 @@
+import { Sidebar, Menu, MenuItem, SubMenu } from "react-pro-sidebar";
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
-import { Sidebar, Menu, MenuItem, SubMenu } from "react-pro-sidebar";
+import { useNavigate } from "react-router-dom";
 
 import ContactInfo from "./ContactInfo";
-import { useNavigate } from "react-router-dom";
 
 const MobileMenu = () => {
   const { pathname } = useLocation();
@@ -37,49 +37,49 @@ const MobileMenu = () => {
             Главная
           </MenuItem>
           <SubMenu
-              label="О Бостоне"
+            label="О Бостоне"
+            className={pathname === "/destinations" ? "current" : ""}
+          >
+            <MenuItem
+              key="1"
+              onClick={() => navigate("/boston/universities")}
               className={pathname === "/destinations" ? "current" : ""}
             >
-              <MenuItem
-                key="1"
-                onClick={() => navigate("/boston/universities")}
-                className={pathname === "/destinations" ? "current" : ""}
-              >
               Университеты
-              </MenuItem>
-              <MenuItem
-                key="2"
-                onClick={() => navigate("/boston/events")}
-                className={pathname === "/destinations" ? "current" : ""}
-              >
+            </MenuItem>
+            <MenuItem
+              key="2"
+              onClick={() => navigate("/boston/events")}
+              className={pathname === "/destinations" ? "current" : ""}
+            >
               События
-              </MenuItem>
-              <MenuItem
-                key="3"
-                onClick={() => navigate("/boston/attractions")}
-                className={pathname === "/destinations" ? "current" : ""}
-              >
+            </MenuItem>
+            <MenuItem
+              key="3"
+              onClick={() => navigate("/boston/attractions")}
+              className={pathname === "/destinations" ? "current" : ""}
+            >
               Достопримечательности
-              </MenuItem>
+            </MenuItem>
           </SubMenu>
           <SubMenu
             label="Поездки"
             className={pathname === "/destinations" ? "current" : ""}
           >
-              <MenuItem
-                key="1"
-                onClick={() => navigate("/trips/upcoming")}
-                className={pathname === "/destinations" ? "current" : ""}
-              >
+            <MenuItem
+              key="1"
+              onClick={() => navigate("/trips/upcoming")}
+              className={pathname === "/destinations" ? "current" : ""}
+            >
               Предстоящие
-              </MenuItem>
-              <MenuItem
-                key="2"
-                onClick={() => navigate("/trips/past")}
-                className={pathname === "/destinations" ? "current" : ""}
-              >
+            </MenuItem>
+            <MenuItem
+              key="2"
+              onClick={() => navigate("/trips/past")}
+              className={pathname === "/destinations" ? "current" : ""}
+            >
               Предыдущие
-              </MenuItem>
+            </MenuItem>
           </SubMenu>
           {/* End  All Pages Menu */}
 

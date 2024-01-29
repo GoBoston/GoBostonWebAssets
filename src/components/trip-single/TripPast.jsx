@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+
 import { pastTrips } from "../../data/trips.js";
 
 const TripPast = () => {

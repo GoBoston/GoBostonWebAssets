@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+
 import universityData from "../../data/universities";
 
 const University = () => {

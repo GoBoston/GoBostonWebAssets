@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 
 function MetaComponent({ meta }) {

@@ -1,19 +1,20 @@
+import PropTypes from "prop-types";
 import { useState, useEffect } from "react";
+
 import getCost from "@/utils/costCalculator";
-import PropTypes from 'prop-types';
 
 
 const Overview = ({trip}) => {
   const [cost, setCost] = useState({ usd: 0, kzt: 0 });
 
-    useEffect(() => {
-        const fetchCost = async () => {
-            const costData = await getCost(trip.cost.default);
-            setCost(costData);
-        };
+  useEffect(() => {
+    const fetchCost = async () => {
+      const costData = await getCost(trip.cost.default);
+      setCost(costData);
+    };
 
-        fetchCost();
-    }, [trip.cost.default]); // dependency array ensures this runs only when trip.cost.default changes
+    fetchCost();
+  }, [trip.cost.default]); // dependency array ensures this runs only when trip.cost.default changes
 
   return (
     <>
@@ -57,11 +58,11 @@ const Overview = ({trip}) => {
               </div>
 
               <div className="col-md-6">
-              {trip.details.notIncluded.map((point, index) => (
-                <div key={index} className="text-dark-1 text-15">
-                  <i className="icon-close text-green-2 text-10 mr-10"></i> 
-                  {point}
-                </div>
+                {trip.details.notIncluded.map((point, index) => (
+                  <div key={index} className="text-dark-1 text-15">
+                    <i className="icon-close text-green-2 text-10 mr-10"></i> 
+                    {point}
+                  </div>
                 ))}
               </div>
             </div>

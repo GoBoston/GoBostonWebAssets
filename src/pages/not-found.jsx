@@ -1,9 +1,8 @@
 import CallToActions from "@/components/common/CallToActions";
-import DefaultHeader from "@/components/header/default-header";
-import DefaultFooter from "@/components/footer/default";
-import NotFound from "@/components/common/NotFound";
-
 import MetaComponent from "@/components/common/MetaComponent";
+import NotFound from "@/components/common/NotFound";
+import DefaultFooter from "@/components/footer/default";
+import DefaultHeader from "@/components/header/default-header";
 
 const metadata = {
   title: "404 || GoBoston - Развиваемся в пути",

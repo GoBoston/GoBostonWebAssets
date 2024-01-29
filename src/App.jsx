@@ -1,6 +1,4 @@
 import Aos from "aos";
-import { useEffect } from "react";
-import SrollTop from "./components/common/ScrollTop";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
@@ -8,31 +6,29 @@ import "swiper/css/scrollbar";
 import "swiper/css/effect-cards";
 import "aos/dist/aos.css";
 import "./styles/index.scss";
+import { useEffect } from "react";
 import { Provider } from "react-redux";
-import { store } from "./store/store";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
+import SrollTop from "./components/common/ScrollTop";
+import ScrollTopBehaviour from "./components/common/ScrollTopBehaviour";
+import Home from "./pages";
+import About from "./pages/about";
+import Apply from "./pages/apply";
+import Attraction from "./pages/boston/attractions/attraction";
+import Attractions from "./pages/boston/attractions/attractionsAll";
+import Event from "./pages/boston/events/event";
+import Events from "./pages/boston/events/eventsAll";
+import Universities from "./pages/boston/universities/universitiesAll";
+import University from "./pages/boston/universities/university";
+import TripPast from "./pages/trips/tripsPast/tripPast";
+import TripsPastAll from "./pages/trips/tripsPast/tripsPastAll";
+import TripsUpcoming from "./pages/trips/tripsUpcoming/tripsUpcomingAll";
+import TripUpcoming from "./pages/trips/tripsUpcoming/tripUpcoming";
+import { store } from "./store/store";
 if (typeof window !== "undefined") {
   import("bootstrap");
 }
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import ScrollTopBehaviour from "./components/common/ScrollTopBehaviour";
-
-
-
-import Home from "./pages";
-import TripUpcoming from "./pages/trips/tripsUpcoming/tripUpcoming"
-import About from "./pages/about";
-import TripsUpcoming from "./pages/trips/tripsUpcoming/tripsUpcomingAll"
-import TripsPastAll from "./pages/trips/tripsPast/tripsPastAll";
-import TripPast from "./pages/trips/tripsPast/tripPast";
-import Attractions from "./pages/boston/attractions/attractionsAll";
-import Attraction from "./pages/boston/attractions/attraction";
-import Universities from "./pages/boston/universities/universitiesAll";
-import University from "./pages/boston/universities/university";
-import Events from "./pages/boston/events/eventsAll";
-import Event from "./pages/boston/events/event";
-import Apply from "./pages/apply";
-
 
 
 function App() {

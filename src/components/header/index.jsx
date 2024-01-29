@@ -1,6 +1,7 @@
-import PropTypes from 'prop-types';
-import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 import { useEffect, useState, useCallback } from "react";
+import { Link } from "react-router-dom";
+
 import MainMenu from "./MainMenu";
 import MobileMenu from "./MobileMenu";
 
