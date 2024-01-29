@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 
-import CategoriesMegaMenu from "./CategoriesMegaMenu";
 import {
   isActiveLink,
   isActiveParentChaild,

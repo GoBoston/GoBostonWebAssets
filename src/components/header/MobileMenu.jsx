@@ -1,9 +1,7 @@
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import { Sidebar, Menu, MenuItem, SubMenu } from "react-pro-sidebar";
-import {
-  categorieMegaMenuItems,
-} from "../../data/mainMenuData";
+
 import ContactInfo from "./ContactInfo";
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
@@ -16,22 +14,6 @@ const MobileMenu = () => {
   const [isActiveNestedParent, setisActiveNestedParent] = useState(false);
 
   const navigate = useNavigate();
-
-  useEffect(() => {
-    categorieMegaMenuItems.map((megaMenu) => {
-      megaMenu?.menuCol?.map((megaCol) => {
-        megaCol?.menuItems?.map((item) => {
-          item?.menuList?.map((list) => {
-            if (list.routePath?.split("/")[1] == pathname.split("/")[1]) {
-              setIsActiveParent(true);
-              setisActiveNestedParentTwo(item?.title);
-              setisActiveNestedParent(megaMenu?.id);
-            }
-          });
-        });
-      });
-    });
-  }, []);
 
   return (
     <>
