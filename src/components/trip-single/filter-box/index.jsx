@@ -1,4 +1,3 @@
-import GuestSearch from "./GuestSearch";
 import DateSearch from "./DateSearch";
 import { Link } from "react-router-dom";
 

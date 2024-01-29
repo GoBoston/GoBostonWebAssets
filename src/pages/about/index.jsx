@@ -1,7 +1,6 @@
 import CallToActions from "@/components/home/home-2/CallToActions";
 import Block1 from "@/components/about/Block1";
 import Block2 from "@/components/about/Block2";
-import News from "@/components/about/News";
 import Testimonial from "@/components/testimonial/Testimonial";
 import Footer2 from "@/components/footer/footer-2";
 import MetaComponent from "@/components/common/MetaComponent";

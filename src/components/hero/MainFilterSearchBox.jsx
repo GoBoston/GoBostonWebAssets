@@ -1,6 +1,5 @@
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
-import DateSearch from "./DateSearch";
 import LocationSearch from "./LocationSearch";
 
 const MainFilterSearchBox = () => {
