@@ -76,4 +76,4 @@ LocationSearch.propTypes = {
   setTripId: PropTypes.func.isRequired
 };
 
-export default LocationSearch
+export default LocationSearch;
