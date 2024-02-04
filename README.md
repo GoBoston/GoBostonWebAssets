@@ -1,4 +1,4 @@
-# GoTrip React Project
+# GoBoston Main Website React Project
 
 This project is a React-based web application utilizing a variety of libraries and tools. Below are the instructions to get started with development, building, and deploying the project.
 
