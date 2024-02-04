@@ -1,5 +1,5 @@
 import MetaComponent from "@/components/common/MetaComponent";
-import Event from "@/components/events/Event";
+import Event from "@/components/events/event";
 import Footer from "@/components/footer";
 import Header from "@/components/header";
 import CallToActions from "@/components/home/CallToActions";
