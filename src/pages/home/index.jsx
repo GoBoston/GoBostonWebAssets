@@ -2,13 +2,13 @@
 import MetaComponent from "@/components/common/MetaComponent";
 import Footer from "@/components/footer";
 import Header from "@/components/header";
-import Search from "@/components/search";
 import BlockGuide from "@/components/home/BlockGuide";
 import CallToActions from "@/components/home/CallToActions";
 import Testimonial from "@/components/home/Testimonial";
 import TestimonialRating from "@/components/home/TestimonialRating";
-import UpcomingTrips from "@/components/trip-single/UpcomingTrips";
+import Search from "@/components/search";
 import TripPast from "@/components/trip-single/TripPast";
+import UpcomingTrips from "@/components/trip-single/UpcomingTrips";
 
 
 const metadata = {
