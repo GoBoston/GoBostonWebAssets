@@ -4,16 +4,16 @@ import "photoswipe/dist/photoswipe.css";
 import { useParams } from "react-router-dom";
 
 import MetaComponent from "@/components/common/MetaComponent";
-import Footer2 from "@/components/footer/footer-2";
+import Footer from "@/components/footer";
 import Header from "@/components/header";
-import CallToActions from "@/components/home/home-2/CallToActions";
+import CallToActions from "@/components/home/CallToActions";
 import SlideGallery from "@/components/trip-single/SlideGallery";
 import Overview from "@/components/trip-single/TripOverview";
 import { pastTrips } from "@/data/trips.js";
 
 const metadata = {
-  title: "Activity Single || GoTrip - Travel & Tour ReactJs Template",
-  description: "GoTrip - Travel & Tour ReactJs Template",
+  title: "Прошлая поездка || GoBoston - Развиваемся в пути",
+  description: "Результаты прошлой поездки GoBoston.",
 };
 
 const TripPast = () => {
@@ -70,7 +70,7 @@ const TripPast = () => {
       <CallToActions />
       {/* End Call To Actions Section */}
 
-      <Footer2 />
+      <Footer />
     </>
   );
 };

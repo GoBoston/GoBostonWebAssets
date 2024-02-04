@@ -1,4 +1,4 @@
-import Social from "../../common/social/Social";
+import Social from "../common/Social";
 
 const Copyright = () => {
   return (

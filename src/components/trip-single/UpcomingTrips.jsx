@@ -1,4 +1,4 @@
-import FilterHotels from "./FilterHotels";
+import UpcomingTripOverview from "./UpcomingTripOverview";
 
 export default function FilterHotels3() {
   return (
@@ -26,7 +26,7 @@ export default function FilterHotels3() {
 
             <div className="relative overflow-hidden pt-40 sm:pt-20">
               <div className="row y-gap-30">
-                <FilterHotels />
+                <UpcomingTripOverview />
               </div>
             </div>
             {/* End relative */}

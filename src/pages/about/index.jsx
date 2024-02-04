@@ -1,14 +1,14 @@
-import Block1 from "@/components/about/Block1";
-import Block2 from "@/components/about/Block2";
+import AboutTeam from "@/components/about/AboutTeam";
+import AboutTeamOverview from "@/components/about/AboutTeamOverview";
 import MetaComponent from "@/components/common/MetaComponent";
-import Footer2 from "@/components/footer/footer-2";
+import Footer from "@/components/footer";
 import Header from "@/components/header";
-import CallToActions from "@/components/home/home-2/CallToActions";
+import CallToActions from "@/components/home/CallToActions";
 import Testimonial from "@/components/testimonial/Testimonial";
 
 const metadata = {
-  title: "Главная страница || GoBoston - Развиваемся в пути",
-  description: "GoBoston - Развиваемся в пути",
+  title: "О нас || GoBoston - Развиваемся в пути",
+  description: "Узнайте о миссии и деятельности GoBoston, организующей образовательные поездки для школьников в США.",
 };
 
 const About = () => {
@@ -45,7 +45,7 @@ const About = () => {
       <section className="layout-pt-md">
         <div className="container">
           <div className="row y-gap-30 justify-between items-center">
-            <Block1 />
+            <AboutTeam />
           </div>
         </div>
       </section>
@@ -54,7 +54,7 @@ const About = () => {
       <section className="layout-pt-md">
         <div className="container">
           <div className="row y-gap-30 justify-between items-center">
-            <Block2 />
+            <AboutTeamOverview />
           </div>
         </div>
       </section>
@@ -90,7 +90,7 @@ const About = () => {
       <CallToActions />
       {/* End Call To Actions Section */}
 
-      <Footer2 />
+      <Footer />
       {/* End Call To Actions Section */}
     </>
   );

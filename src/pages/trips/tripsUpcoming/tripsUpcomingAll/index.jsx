@@ -1,12 +1,12 @@
 import MetaComponent from "@/components/common/MetaComponent";
-import Footer2 from "@/components/footer/footer-2";
+import Footer from "@/components/footer";
 import Header from "@/components/header";
-import CallToActions from "@/components/home/home-2/CallToActions";
-import FilterHotels3 from "@/components/hotels/FilterHotels3";
+import CallToActions from "@/components/home/CallToActions";
+import UpcomingTrips from "@/components/trip-single/UpcomingTrips";
 
 const metadata = {
-  title: "Главная страница || GoBoston - Развиваемся в пути",
-  description: "GoBoston - Развиваемся в пути",
+  title: "Предстоящие поездки || GoBoston - Развиваемся в пути",
+  description: "Предстоящие поездки GoBoston. Узнайте больше о возможностях зарубежом.",
 };
 
 const TripsUpcoming = () => {
@@ -18,7 +18,7 @@ const TripsUpcoming = () => {
       <Header noScroll/>
       {/* End Header 2 */}
 
-      <FilterHotels3 />
+      <UpcomingTrips />
 
 
       {/* End Best Seller Hotels Sections */}
@@ -28,7 +28,7 @@ const TripsUpcoming = () => {
       <CallToActions />
       {/* End CallToActions Section */}
 
-      <Footer2 />
+      <Footer />
       {/* End Footer Section */}
     </>
   );

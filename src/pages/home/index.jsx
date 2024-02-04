@@ -1,19 +1,19 @@
 
 import MetaComponent from "@/components/common/MetaComponent";
-import Footer2 from "@/components/footer/footer-2";
+import Footer from "@/components/footer";
 import Header from "@/components/header";
-import Hero from "@/components/hero";
-import BlockGuide from "@/components/home/home-2/BlockGuide";
-import CallToActions from "@/components/home/home-2/CallToActions";
-import Testimonial from "@/components/home/home-2/Testimonial";
-import TestimonialRating from "@/components/home/home-2/TestimonialRating";
-import FilterHotels3 from "@/components/hotels/FilterHotels3";
+import Search from "@/components/search";
+import BlockGuide from "@/components/home/BlockGuide";
+import CallToActions from "@/components/home/CallToActions";
+import Testimonial from "@/components/home/Testimonial";
+import TestimonialRating from "@/components/home/TestimonialRating";
+import UpcomingTrips from "@/components/trip-single/UpcomingTrips";
 import TripPast from "@/components/trip-single/TripPast";
 
 
 const metadata = {
   title: "Главная страница || GoBoston - Развиваемся в пути",
-  description: "GoBoston - Развиваемся в пути",
+  description: "GoBoston - Развиваемся в пути. Узнайте больше о возможностях зарубежом.",
 };
 
 const Home = () => {
@@ -23,10 +23,10 @@ const Home = () => {
       {/* End Page Title */}
 
       <Header/>
-      {/* End Header 2 */}
+      {/* End Header */}
 
-      <Hero />
-      {/* End Hero 1 */}
+      <Search />
+      {/* End Search */}
 
 
       <section className="layout-pt-lg layout-pb-md bg-dark-3">
@@ -38,7 +38,7 @@ const Home = () => {
       </section>
       {/* End travel block sections */}
 
-      <FilterHotels3 />
+      <UpcomingTrips />
 
       {/* End Best Seller Hotels Sections */}
 
@@ -91,7 +91,7 @@ const Home = () => {
       <CallToActions />
       {/* End CallToActions Section */}
 
-      <Footer2 />
+      <Footer />
       {/* End Footer Section */}
     </>
   );

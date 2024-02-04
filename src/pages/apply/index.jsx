@@ -1,12 +1,12 @@
 import ContactForm from "@/components/common/ContactForm";
 import MetaComponent from "@/components/common/MetaComponent";
-import Footer2 from "@/components/footer/footer-2";
+import Footer from "@/components/footer";
 import Header from "@/components/header";
-import CallToActions from "@/components/home/home-2/CallToActions";
+import CallToActions from "@/components/home/CallToActions";
 
 const metadata = {
-  title: "Главная страница || GoBoston - Развиваемся в пути",
-  description: "GoBoston - Развиваемся в пути",
+  title: "Подать заявку || GoBoston - Развиваемся в пути",
+  description: "Подайте заявку на предстоящую поездку заполнив короткую форму.",
 };
 
 const Apply = () => {
@@ -38,7 +38,7 @@ const Apply = () => {
       <CallToActions />
       {/* End Call To Actions Section */}
 
-      <Footer2 />
+      <Footer />
       {/* End Footer Section */}
     </>
   );

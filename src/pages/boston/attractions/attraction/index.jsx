@@ -2,14 +2,14 @@ import { useParams } from "react-router-dom";
 
 import Overview from "@/components/attractions/AttractionOverview";
 import MetaComponent from "@/components/common/MetaComponent";
-import Footer2 from "@/components/footer/footer-2";
+import Footer from "@/components/footer";
 import Header from "@/components/header";
-import CallToActions from "@/components/home/home-2/CallToActions";
+import CallToActions from "@/components/home/CallToActions";
 import attractions from "@/data/attractions";
 
 const metadata = {
-  title: "Главная страница || GoBoston - Развиваемся в пути",
-  description: "GoBoston - Развиваемся в пути",
+  title: "Аттракцион || GoBoston - Развиваемся в пути",
+  description: "Узнайте больше об атракционах Бостона",
 };
 
 const Attraction = () => {
@@ -78,7 +78,7 @@ const Attraction = () => {
       <CallToActions />
       {/* End CallToActions Section */}
 
-      <Footer2 />
+      <Footer />
       {/* End Footer Section */}
     </>
   );
