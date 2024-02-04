@@ -1,4 +1,4 @@
-import Attraction from "@/components/attractions/Attraction";
+import Attraction from "@/components/attractions/attraction";
 import MetaComponent from "@/components/common/MetaComponent";
 import Footer from "@/components/footer";
 import Header from "@/components/header";
