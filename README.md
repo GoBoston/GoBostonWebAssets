@@ -46,15 +46,8 @@ To automatically fix linting errors where possible:
 ```bash
     yarn lint --fix
 ```
-Previewing the Build
-
-After building the project, you can preview the production build using:
-
-To deploy the build to GitHub Pages:
 
 Additional Information
 
     This project uses React 18.2.0 and Vite 4.5.2, along with other dependencies.
     Project configuration and scripts are defined in package.json.
-
-For more detailed information, refer to the individual package documentation and the project's documentation.
