@@ -2,7 +2,7 @@ import { Navigation, Pagination } from "swiper";
 import { EffectCards } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-import { testimonial1 } from "../../../data/testimonialData";
+import { testimonial1 } from "../../data/testimonialData";
 
 
 const Testimonial = () => {

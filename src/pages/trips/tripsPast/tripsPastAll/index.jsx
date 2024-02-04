@@ -1,13 +1,13 @@
 import MetaComponent from "@/components/common/MetaComponent";
-import Footer2 from "@/components/footer/footer-2";
+import Footer from "@/components/footer";
 import Header from "@/components/header";
-import CallToActions from "@/components/home/home-2/CallToActions";
+import CallToActions from "@/components/home/CallToActions";
 import TripPast from "@/components/trip-single/TripPast";
 
 
 const metadata = {
-  title: "Главная страница || GoBoston - Развиваемся в пути",
-  description: "GoBoston - Развиваемся в пути",
+  title: "Прошлые поездки || GoBoston - Развиваемся в пути",
+  description: "Результаты прошлых поездок GoBoston.",
 };
 
 const TripsPastAll = () => {
@@ -39,7 +39,7 @@ const TripsPastAll = () => {
       <CallToActions />
       {/* End CallToActions Section */}
 
-      <Footer2 />
+      <Footer />
       {/* End Footer Section */}
     </>
   );

@@ -1,15 +1,15 @@
 import { useParams } from "react-router-dom";
 
 import MetaComponent from "@/components/common/MetaComponent";
-import Footer2 from "@/components/footer/footer-2";
+import Footer from "@/components/footer";
 import Header from "@/components/header";
-import CallToActions from "@/components/home/home-2/CallToActions";
+import CallToActions from "@/components/home/CallToActions";
 import Overview from "@/components/universities/UniversityOverview";
 import universities from "@/data/universities";
 
 const metadata = {
-  title: "Главная страница || GoBoston - Развиваемся в пути",
-  description: "GoBoston - Развиваемся в пути",
+  title: "Университет || GoBoston - Развиваемся в пути",
+  description: "Узнайте больше об университетах Бостона",
 };
 
 const University = () => {
@@ -77,7 +77,7 @@ const University = () => {
       <CallToActions />
       {/* End CallToActions Section */}
 
-      <Footer2 />
+      <Footer />
       {/* End Footer Section */}
     </>
   );

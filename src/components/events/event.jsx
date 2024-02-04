@@ -7,7 +7,6 @@ const Event = () => {
     <>
       <div className="tabs -pills-3 pt-30 js-tabs">
         {/* End tab-controls */}
-
         <div className="row y-gap-30 pt-30">
           {eventData.slice(0, 9).map((item) => (
             <div className="col-lg-4 col-sm-6" key={item.id}>

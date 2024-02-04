@@ -5,7 +5,7 @@ import { useParams } from "react-router-dom";
 
 import MetaComponent from "@/components/common/MetaComponent";
 import Faq from "@/components/faq/Faq";
-import Footer2 from "@/components/footer/footer-2";
+import Footer from "@/components/footer";
 import Header from "@/components/header";
 import ImportantInfo from "@/components/trip-single/ImportantInfo";
 import Overview from "@/components/trip-single/Overview";
@@ -15,8 +15,8 @@ import TourSnapShot from "@/components/trip-single/TourSnapShot";
 import trips from "@/data/trips";
 
 const metadata = {
-  title: "Главная страница || GoBoston - Развиваемся в пути",
-  description: "GoBoston - Развиваемся в пути",
+  title: "Предстоящая поездка || GoBoston - Развиваемся в пути",
+  description: "Предстоящая поездка GoBoston. Узнайте больше о возможностях зарубежом.",
 };
 
 const TripUpcoming = () => {
@@ -133,7 +133,7 @@ const TripUpcoming = () => {
       {/* End Faq about sections */}
 
 
-      <Footer2 />
+      <Footer />
     </>
   );
 };

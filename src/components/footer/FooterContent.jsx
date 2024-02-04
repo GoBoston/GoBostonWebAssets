@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-import footerDataContent from "../../../data/footerContent";
+import footerDataContent from "../../data/footerContent";
 
 const FooterContent = () => {
   return (
