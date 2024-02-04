@@ -2,7 +2,7 @@ import MetaComponent from "@/components/common/MetaComponent";
 import Footer from "@/components/footer";
 import Header from "@/components/header";
 import CallToActions from "@/components/home/CallToActions";
-import University from "@/components/universities/University";
+import University from "@/components/universities/university";
 
 
 const metadata = {
