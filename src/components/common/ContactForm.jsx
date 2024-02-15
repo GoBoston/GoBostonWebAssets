@@ -13,7 +13,6 @@ const ContactForm = () => {
 
   const closeModalAndRedirect = () => {
     setShowModal(false); // Close the modal
-    formDataJson
     navigate('/trips/upcoming/'); // Redirect to the other page
   };
   
