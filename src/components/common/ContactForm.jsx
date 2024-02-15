@@ -1,8 +1,8 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 import schools from "@/data/schools";
 import trips from "@/data/trips";
-import { useNavigate } from 'react-router-dom';
 
 
 const ContactForm = () => {
@@ -13,7 +13,7 @@ const ContactForm = () => {
 
   const closeModalAndRedirect = () => {
     setShowModal(false); // Close the modal
-    navigate('/trips/upcoming/'); // Redirect to the other page
+    navigate("/trips/upcoming/"); // Redirect to the other page
   };
   
 
@@ -42,42 +42,43 @@ const ContactForm = () => {
         school: document.getElementById("school").value,
         grade: document.getElementById("grade").value,
         tour: document.getElementById("tour").value,
-        message: document.getElementById("message").value
+        message: document.getElementById("message").value,
+        age: document.getElementById("age").value,
       };
 
       // Set the form data JSON and show the modal
       setFormDataJson(JSON.stringify(formData, null, 2));
-      const messageText = `Name: ${formData.name}, Email: ${formData.email}, Phone: ${formData.phoneNumber}, School: ${formData.school}, Grade: ${formData.grade}, Tour: ${formData.tour}, Message: ${formData.message}`;
+      const messageText = `#formSubmission\nНовая заявка\nИмя Фамилия: ${formData.name}\nEmail: ${formData.email}\nТелефон: ${formData.phoneNumber}\nШкола: ${formData.school}(Класс: ${formData.grade}, Возраст: ${formData.age})\nТур: ${formData.tour}\nДополнительно: ${formData.message}`;
   
-    const botToken = import.meta.env.VITE_TELEGRAM_BOT_TOKEN;
-    const chatId = import.meta.env.VITE_TELEGRAM_CHAT_ID;
-    const sendMessageUrl = `https://api.telegram.org/bot${botToken}/sendMessage`;
+      const botToken = import.meta.env.VITE_TELEGRAM_BOT_TOKEN;
+      const chatId = import.meta.env.VITE_TELEGRAM_CHAT_ID;
+      const sendMessageUrl = `https://api.telegram.org/bot${botToken}/sendMessage`;
   
-    try {
-      const response = await fetch(sendMessageUrl, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          chat_id: chatId,
-          text: messageText,
-          parse_mode: 'HTML'
-        }),
-      });
+      try {
+        const response = await fetch(sendMessageUrl, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({
+            chat_id: chatId,
+            text: messageText,
+            parse_mode: "HTML"
+          }),
+        });
   
-      const responseData = await response.json();
+        const responseData = await response.json();
   
-      if (!response.ok || !responseData.ok) {
-        console.log(responseData);
-        throw new Error('Failed to send message');
-      }
+        if (!response.ok || !responseData.ok) {
+          console.log(responseData);
+          throw new Error("Failed to send message");
+        }
   
       // Handle success (e.g., showing a confirmation message to the user)
-    } catch (error) {
-      console.error('Error sending message to Telegram:', error);
+      } catch (error) {
+        console.error("Error sending message to Telegram:", error);
       // Handle error (e.g., showing an error message to the user)
-    }
+      }
       setShowModal(true);
       
     } else {
@@ -141,9 +142,19 @@ const ContactForm = () => {
         <div className="row justify-content-start">
           <div className="col-6 offset-md-3">
             <div className="form-input">
-              <input type="text" id="grade" required />
+              <input type="number" id="grade" required />
               <label htmlFor="grade" className="lh-1 text-16 text-light-1">
               Класс обучения
+              </label>
+            </div>
+          </div>
+        </div>
+        <div className="row justify-content-start">
+          <div className="col-6 offset-md-3">
+            <div className="form-input">
+              <input type="number" id="age" required />
+              <label htmlFor="age" className="lh-1 text-16 text-light-1">
+              Возраст
               </label>
             </div>
           </div>
@@ -163,7 +174,7 @@ const ContactForm = () => {
         <div className="row justify-content-start">
           <div className="col-6 offset-md-3">
             <div className="form-input">
-              <textarea id="message" required rows="4"></textarea>
+              <textarea id="message" rows="4"></textarea>
               <label htmlFor="message" className="lh-1 text-16 text-light-1">
               Дополнительно
               </label>
