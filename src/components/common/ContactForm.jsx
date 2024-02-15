@@ -2,23 +2,33 @@ import React from "react";
 
 import schools from "@/data/schools";
 import trips from "@/data/trips";
+import { useNavigate } from 'react-router-dom';
+
 
 const ContactForm = () => {
   const [showModal, setShowModal] = React.useState(false);
   const [formDataJson, setFormDataJson] = React.useState("");
   const [phoneNumberError, setPhoneNumberError] = React.useState("");
+  const navigate = useNavigate();
 
-  const handleSubmit = (event) => {
+  const closeModalAndRedirect = () => {
+    setShowModal(false); // Close the modal
+    formDataJson
+    navigate('/trips/upcoming/'); // Redirect to the other page
+  };
+  
+
+  const handleSubmit = async (event) => {
+
+    
     event.preventDefault();
-
-    // Get the phone number element
     const phoneNumberElement = document.getElementById("phonenumber");
 
     // Check if the phone number element exists
     if (phoneNumberElement) {
       const phoneNumber = phoneNumberElement.value;
       if (!phoneNumber.startsWith("+7")) {
-        setPhoneNumberError("Phone number must start with +7.");
+        setPhoneNumberError("Номер телефона должен начинаться с +7.");
         return;
       }
 
@@ -38,11 +48,47 @@ const ContactForm = () => {
 
       // Set the form data JSON and show the modal
       setFormDataJson(JSON.stringify(formData, null, 2));
+      const messageText = `Name: ${formData.name}, Email: ${formData.email}, Phone: ${formData.phoneNumber}, School: ${formData.school}, Grade: ${formData.grade}, Tour: ${formData.tour}, Message: ${formData.message}`;
+  
+    const botToken = import.meta.env.VITE_TELEGRAM_BOT_TOKEN;
+    const chatId = import.meta.env.VITE_TELEGRAM_CHAT_ID;
+    const sendMessageUrl = `https://api.telegram.org/bot${botToken}/sendMessage`;
+  
+    try {
+      const response = await fetch(sendMessageUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          chat_id: chatId,
+          text: messageText,
+          parse_mode: 'HTML'
+        }),
+      });
+  
+      const responseData = await response.json();
+  
+      if (!response.ok || !responseData.ok) {
+        console.log(responseData);
+        throw new Error('Failed to send message');
+      }
+  
+      // Handle success (e.g., showing a confirmation message to the user)
+    } catch (error) {
+      console.error('Error sending message to Telegram:', error);
+      // Handle error (e.g., showing an error message to the user)
+    }
       setShowModal(true);
+      
     } else {
       console.error("Phone number field not found");
     }
+  
+    
   };
+  
+  
 
   return (
     <section className="layout-pt-md layout-pb-lg">
@@ -130,7 +176,7 @@ const ContactForm = () => {
             type="submit"
             className="button px-24 h-50 -dark-1 bg-blue-1 text-white"
           >
-          Send Message <div className="icon-arrow-top-right ml-15"></div>
+          Отправить заявку! <div className="icon-arrow-top-right ml-15"></div>
           </button>
         </div>
       </form>
@@ -138,16 +184,17 @@ const ContactForm = () => {
         <div className="modal-dialog">
           <div className="modal-content">
             <div className="modal-header">
-              <h5 className="modal-title">Form Data</h5>
-              <button type="button" className="close" onClick={() => setShowModal(false)}>
+              <h5 className="modal-title">Ура! Развиваемся в Пути!</h5>
+              <button type="button" className="close" onClick={closeModalAndRedirect}>
                 <span>&times;</span>
               </button>
             </div>
             <div className="modal-body">
+              Ваша заявка отправлена: 
               <pre>{formDataJson}</pre>
             </div>
             <div className="modal-footer">
-              <button type="button" className="btn btn-secondary" onClick={() => setShowModal(false)}>Close</button>
+              <button type="button" className="btn btn-secondary" onClick={closeModalAndRedirect}>Закрыть</button>
             </div>
           </div>
         </div>

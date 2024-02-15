@@ -20,7 +20,7 @@ const schools = [
     name: "NIS Almaty"
   },
   {
-    id: 1,
+    id: 6,
     name: "NIS Astana"
   },
 ];
