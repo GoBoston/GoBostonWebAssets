@@ -1,8 +1,8 @@
 const upcomingTrips = [
   {
     id: 1,
-    slideImg: ["/img/trips/22.png", "/img/trips/23.png", "/img/trips/24.png", "/img/trips/25.png", "/img/trips/26.png", "/img/trips/27.png", "/img/trips/28.png"],
-    img: "/img/trips/22.png",
+    slideImg: ["/img/trips/22.jpg", "/img/trips/23.jpg", "/img/trips/24.jpg", "/img/trips/25.jpg", "/img/trips/26.jpg", "/img/trips/27.jpg", "/img/trips/28.jpg"],
+    img: "/img/trips/22.jpg",
     name: "Семинар о применении AI в образовании",
     dates: {
       start: "23/06/2024",
@@ -118,8 +118,8 @@ const upcomingTrips = [
 const pastTrips = [
   {
     id: 1,
-    slideImg: ["/img/trips/3.png", "/img/trips/4.png", "/img/trips/5.png", "/img/trips/6.png"],
-    img: "/img/trips/5.png",
+    slideImg: ["/img/trips/3.jpg", "/img/trips/4.jpg", "/img/trips/5.jpg", "/img/trips/6.jpg"],
+    img: "/img/trips/5.jpg",
     name: "The Harvard-MIT Math Olympiad (Осень 2016)",
     dates: "Осень 2016",
     delayAnimation: 0,
@@ -128,8 +128,8 @@ const pastTrips = [
   },
   {
     id: 2,
-    slideImg: ["/img/trips/7.png", "/img/trips/8.png", "/img/trips/9.png", "/img/trips/10.png", "/img/trips/11.png", "/img/trips/12.png", "/img/trips/13.png"],
-    img: "/img/trips/10.png",
+    slideImg: ["/img/trips/7.jpg", "/img/trips/8.jpg", "/img/trips/9.jpg", "/img/trips/10.jpg", "/img/trips/11.jpg", "/img/trips/12.jpg", "/img/trips/13.jpg"],
+    img: "/img/trips/10.jpg",
     name: "The Harvard-MIT Math Olympiad (Осень 2017)",
     dates: "Осень 2017",
     delayAnimation: 0,
@@ -138,8 +138,8 @@ const pastTrips = [
   },
   {
     id: 3,
-    slideImg: ["/img/trips/14.png", "/img/trips/15.png", "/img/trips/16.png"],
-    img: "/img/trips/16.png",
+    slideImg: ["/img/trips/14.jpg", "/img/trips/15.jpg", "/img/trips/16.jpg"],
+    img: "/img/trips/16.jpg",
     name: "The Harvard-MIT Math Olympiad (Осень 2018)",
     dates: "Осень 2018",
     delayAnimation: 0,
@@ -148,8 +148,8 @@ const pastTrips = [
   },
   {
     id: 4,
-    slideImg: ["/img/trips/17.png", "/img/trips/18.png", "/img/trips/19.png", "/img/trips/20.png", "/img/trips/21.png"],
-    img: "/img/trips/19.png",
+    slideImg: ["/img/trips/17.jpg", "/img/trips/18.jpg", "/img/trips/19.jpg", "/img/trips/20.jpg", "/img/trips/21.jpg"],
+    img: "/img/trips/19.jpg",
     name: "The Harvard-MIT Math Olympiad (Осень 2019)",
     dates: "Осень 2019",
     delayAnimation: 0,
@@ -158,8 +158,8 @@ const pastTrips = [
   },
   {
     id: 5,
-    slideImg: ["/img/trips/29.png", "/img/trips/30.png", "/img/trips/31.png", "/img/trips/32.png", "/img/trips/33.png", "/img/trips/34.png", "/img/trips/35.png", "/img/trips/36.png", ],
-    img: "/img/trips/29.png",
+    slideImg: ["/img/trips/29.jpg", "/img/trips/30.jpg", "/img/trips/31.jpg", "/img/trips/32.jpg", "/img/trips/33.jpg", "/img/trips/34.jpg", "/img/trips/35.jpg", "/img/trips/36.jpg", ],
+    img: "/img/trips/29.jpg",
     name: "Codeday хакатон (Зима 2020)",
     dates: "Зима 2020",
     delayAnimation: 0,
