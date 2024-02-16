@@ -87,15 +87,7 @@ const FilterHotels = () => {
                         ? "bg-blue-1 text-white"
                         : ""
                     }
-                    } ${
-        isTextMatched(item?.tag, "-25% today")
-          ? "bg-brown-1 text-white"
-          : ""
-        } ${
-          isTextMatched(item?.tag, "top rated")
-            ? "bg-yellow-1 text-dark-1"
-            : ""
-        }
+                    }
                     `}
                   >
                     {item?.tag}

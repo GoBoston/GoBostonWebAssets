@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 import schools from "@/data/schools";
 import trips from "@/data/trips";
-
+import cities from "@/data/cities";
 
 const ContactForm = () => {
   const [showModal, setShowModal] = React.useState(false);
@@ -40,6 +40,7 @@ const ContactForm = () => {
         email: document.getElementById("email").value,
         phoneNumber: phoneNumber,
         school: document.getElementById("school").value,
+        city: document.getElementById("city").value,
         grade: document.getElementById("grade").value,
         tour: document.getElementById("tour").value,
         message: document.getElementById("message").value,
@@ -48,7 +49,7 @@ const ContactForm = () => {
 
       // Set the form data JSON and show the modal
       setFormDataJson(JSON.stringify(formData, null, 2));
-      const messageText = `#formSubmission\nНовая заявка\nИмя Фамилия: ${formData.name}\nEmail: ${formData.email}\nТелефон: ${formData.phoneNumber}\nШкола: ${formData.school}(Класс: ${formData.grade}, Возраст: ${formData.age})\nТур: ${formData.tour}\nДополнительно: ${formData.message}`;
+      const messageText = `#formSubmission\nНовая заявка\nИмя Фамилия: ${formData.name}\nEmail: ${formData.email}\nТелефон: ${formData.phoneNumber}\nШкола: ${formData.school}(Класс: ${formData.grade}, Возраст: ${formData.age})\nГород: ${formData.city}\nТур: ${formData.tour}\nДополнительно: ${formData.message}`;
   
       const botToken = import.meta.env.VITE_TELEGRAM_BOT_TOKEN;
       const chatId = import.meta.env.VITE_TELEGRAM_CHAT_ID;
@@ -87,8 +88,6 @@ const ContactForm = () => {
   
     
   };
-  
-  
 
   return (
     <section className="layout-pt-md layout-pb-lg">
@@ -132,10 +131,22 @@ const ContactForm = () => {
                 {schools.map((item) => (
                   <option key={item.id} value={item.name}>{item.name}</option>
                 ))}
-                <option value="Other Public School">Other Public School</option>
-                <option value="Other Private School">Other Private School</option>
+                <option value="Other Public School">Другая школа</option>
               </select>
 
+            </div>
+          </div>
+        </div>
+        <div className="row justify-content-start">
+          <div className="col-6 offset-md-3">
+            <label>Город</label>
+            <div className="form-input">
+              <select id="city" className="form-select" required>
+                {cities.slice(0, 8).map((city, index) => (
+                  <option key={index} value={city.name}>{city.name}</option>
+                ))}
+                <option value="Other City">Другой город</option>
+              </select>
             </div>
           </div>
         </div>

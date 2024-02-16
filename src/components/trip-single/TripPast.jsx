@@ -27,7 +27,7 @@ const TripPast = () => {
                 <div className="pt-20">
                   <h4 className="text-dark-1 text-18 fw-500">{item?.name}</h4>
                   <div className="text-light-1 text-15 lh-14 mt-5">
-                    {item?.dates.start} - {item?.dates.end}: {item?.title}, {item?.location}
+                    {item.description}
                   </div>
                 </div>
               </Link>
