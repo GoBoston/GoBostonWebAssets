@@ -230,11 +230,11 @@ const upcomingTrips = [
     id: 3,
     slideImg: ["/img/trips/12.jpg", "/img/trips/22.jpg", "/img/trips/23.jpg", "/img/trips/24.jpg", "/img/trips/25.jpg", "/img/trips/26.jpg", "/img/trips/27.jpg", "/img/trips/28.jpg"],
     img: "/img/trips/12.jpg",
-    name: "Обзор университетов (Июль 2024)",
+    name: "Обзор университетов (Август 2024)",
     dates: {
-      start: "14/07/2024",
-      end: "24/07/2024",
-      name: "Июль 2024"
+      start: "4/08/2024",
+      end: "14/08/2024",
+      name: "Август 2024"
     },
     delayAnimation: 0,
     tag: "4 августа - 14 августа (Предварительная дата)",
