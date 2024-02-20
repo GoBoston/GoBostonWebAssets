@@ -22,7 +22,7 @@ const upcomingTrips = [
     details: {
       name: "Семинар о применении AI в образовании",
       duration: "11 дней",
-      groupSize: "7 человек",
+      groupSize: "8 человек",
       departingCity: "Алматы",
       arrivingCity: "New York, Boston",
       info: [
