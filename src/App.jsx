@@ -8,7 +8,7 @@ import "aos/dist/aos.css";
 import "./styles/index.scss";
 import { useEffect } from "react";
 import { Provider } from "react-redux";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
 import SrollTop from "./components/common/ScrollTop";
 import ScrollTopBehaviour from "./components/common/ScrollTopBehaviour";
@@ -80,6 +80,9 @@ function App() {
 
               <Route path="apply" element={<Apply />} />
 
+              <Route path="june" element={<Navigate replace to="/trips/upcoming/1" />} />
+              <Route path="july" element={<Navigate replace to="/trips/upcoming/2" />} />
+              <Route path="august" element={<Navigate replace to="/trips/upcoming/3" />} />
             </Route>
           </Routes>
           <ScrollTopBehaviour />
