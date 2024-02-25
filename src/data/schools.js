@@ -17,12 +17,13 @@ const schools = [
   {"id": 16, "name": "Shokan School"},
   {"id": 17, "name": "Spectrum"},
   {"id": 18, "name": "Tamos Education"},
-  {"id": 19, "name": "Лицей N8 Павлодар"},
+  {"id": 19, "name": "ASPM School Almaty"},
   {"id": 20, "name": "54 школа"},
   {"id": 21, "name": "Гимназия N90"},
   {"id": 22, "name": "Лицей N105"},
   {"id": 23, "name": "Лицей N134"},
-  {"id": 24, "name": "Лицей N165"}
+  {"id": 24, "name": "Лицей N165"},
+  {"id": 25, "name": "Лицей N8 Павлодар"},
 ];
 
 export default schools;
