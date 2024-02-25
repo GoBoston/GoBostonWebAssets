@@ -11,7 +11,7 @@ const SidebarRight = ({ trip }) => {
 
   useEffect(() => {
     const fetchCost = async () => {
-      const costData = await getCost(trip.cost.default);
+      const costData = await getCost(trip.cost);
       setCost(costData);
     };
 
@@ -25,7 +25,7 @@ const SidebarRight = ({ trip }) => {
           <div className="text-14 text-light-1">
             Стоимость: {" "}
             <span className="text-20 fw-500 text-dark-1 ml-5">
-              {cost.usd}$ ({cost.kzt} KZT)
+            {cost.hide ? 'Программа уточняется' : `${cost.usd}$ (${cost.kzt} KZT)`}
             </span>
           </div>
           {/* End div */}

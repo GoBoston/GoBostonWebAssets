@@ -1,4 +1,6 @@
-export default async function getCost(costString) {
+export default async function getCost(cost) {
+  const costString = cost.default;
+  const hide = cost.hide;
   const rate = await getRate();
   let usdValue, kztValue;
   if (costString.endsWith("USD")) {
@@ -10,7 +12,8 @@ export default async function getCost(costString) {
   }
   return {
     usd: parseInt(usdValue),
-    kzt: parseInt(kztValue)
+    kzt: parseInt(kztValue),
+    hide: hide
   };
 }
 

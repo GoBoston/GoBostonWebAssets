@@ -130,13 +130,14 @@ const upcomingTrips = [
     description: "Наши ученики посетят больше 10 ведущих универсетитов Америки, пообщаются с их студентами, а также посетят мастер-класс по написанию сопроводительного эссе.",
     location: "Бостон",
     cost: {
-      default: "4850USD"
+      default: "Уточняется",
+      hide: true,
     },
     deadline: "07/04/2024",
     details: {
       name: "Обзор университетов (Июль 2024)",
       duration: "11 дней",
-      groupSize: "7 человек",
+      groupSize: "8 человек",
       departingCity: "Алматы",
       arrivingCity: "New York, Boston",
       info: [
@@ -243,13 +244,14 @@ const upcomingTrips = [
     description: "Наши ученики посетят больше 10 ведущих универсетитов Америки, пообщаются с их студентами, а также посетят мастер-класс по написанию сопроводительного эссе.",
     location: "Бостон",
     cost: {
-      default: "4850USD"
+      default: "4850USD",
+      hide: true,
     },
     deadline: "07/04/2024",
     details: {
       name: "Обзор университетов (Август 2024)",
       duration: "11 дней",
-      groupSize: "7 человек",
+      groupSize: "8 человек",
       departingCity: "Алматы",
       arrivingCity: "New York, Boston",
       info: [
