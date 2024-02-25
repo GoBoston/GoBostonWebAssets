@@ -93,7 +93,7 @@ const ContactForm = () => {
     <section className="layout-pt-md layout-pb-lg">
       <form className="row y-gap-20 pt-30" onSubmit={handleSubmit}>
         <div className="row justify-content-start">
-          <div className="col-6 offset-md-3">
+          <div className="col-12 col-md-6 offset-md-3 offset-0">
             <div className="form-input">
               <input type="text" id="name" required />
               <label htmlFor="name" className="lh-1 text-16 text-light-1">
@@ -103,7 +103,7 @@ const ContactForm = () => {
           </div>
         </div>
         <div className="row justify-content-start">
-          <div className="col-6 offset-md-3">
+          <div className="col-12 col-md-6 offset-md-3 offset-0">
             <div className="form-input">
               <input type="email" id="email" required />
               <label htmlFor="email" className="lh-1 text-16 text-light-1">
@@ -113,18 +113,29 @@ const ContactForm = () => {
           </div>
         </div>
         <div className="row justify-content-start">
-          <div className="col-6 offset-md-3">
+          <div className="col-12 col-md-6 offset-md-3 offset-0">
             <div className="form-input">
               <input type="text" id="phonenumber" required />
               <label htmlFor="phonenumber" className="lh-1 text-16 text-light-1">
-              Номер телефона
+              Номер телефона ученика
               </label>
               {phoneNumberError && <div className="text-danger">{phoneNumberError}</div>}
             </div>
           </div>
         </div>
         <div className="row justify-content-start">
-          <div className="col-6 offset-md-3">
+          <div className="col-12 col-md-6 offset-md-3 offset-0">
+            <div className="form-input">
+              <input type="text" id="phonenumberParent" required />
+              <label htmlFor="phonenumberParent" className="lh-1 text-16 text-light-1">
+              Номер телефона родителя
+              </label>
+              {phoneNumberError && <div className="text-danger">{phoneNumberError}</div>}
+            </div>
+          </div>
+        </div>
+        <div className="row justify-content-start">
+          <div className="col-12 col-md-6 offset-md-3 offset-0">
             <label>Школа</label>
             <div className="form-input">
               <select id="school" className="form-select" required>
@@ -138,7 +149,7 @@ const ContactForm = () => {
           </div>
         </div>
         <div className="row justify-content-start">
-          <div className="col-6 offset-md-3">
+          <div className="col-12 col-md-6 offset-md-3 offset-0">
             <label>Город</label>
             <div className="form-input">
               <select id="city" className="form-select" required>
@@ -151,7 +162,7 @@ const ContactForm = () => {
           </div>
         </div>
         <div className="row justify-content-start">
-          <div className="col-6 offset-md-3">
+          <div className="col-12 col-md-6 offset-md-3 offset-0">
             <div className="form-input">
               <input type="number" id="grade" required />
               <label htmlFor="grade" className="lh-1 text-16 text-light-1">
@@ -161,7 +172,7 @@ const ContactForm = () => {
           </div>
         </div>
         <div className="row justify-content-start">
-          <div className="col-6 offset-md-3">
+          <div className="col-12 col-md-6 offset-md-3 offset-0">
             <div className="form-input">
               <input type="number" id="age" required />
               <label htmlFor="age" className="lh-1 text-16 text-light-1">
@@ -171,7 +182,7 @@ const ContactForm = () => {
           </div>
         </div>
         <div className="row justify-content-start">
-          <div className="col-6 offset-md-3">
+          <div className="col-12 col-md-6 offset-md-3 offset-0">
             <label>Тур</label>
             <div className="form-input">
               <select id="tour" className="form-select" required>
@@ -183,7 +194,7 @@ const ContactForm = () => {
           </div>
         </div>
         <div className="row justify-content-start">
-          <div className="col-6 offset-md-3">
+          <div className="col-12 col-md-6 offset-md-3 offset-0">
             <div className="form-input">
               <textarea id="message" rows="4"></textarea>
               <label htmlFor="message" className="lh-1 text-16 text-light-1">
