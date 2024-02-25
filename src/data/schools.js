@@ -18,8 +18,11 @@ const schools = [
   {"id": 17, "name": "Spectrum"},
   {"id": 18, "name": "Tamos Education"},
   {"id": 19, "name": "Лицей N8 Павлодар"},
-  {"id": 20, "name": "Лицей N134"},
-  {"id": 21, "name": "Лицей N165"}
+  {"id": 20, "name": "54 школа"},
+  {"id": 21, "name": "Гимназия N90"},
+  {"id": 22, "name": "Лицей N105"},
+  {"id": 23, "name": "Лицей N134"},
+  {"id": 24, "name": "Лицей N165"}
 ];
 
 export default schools;

@@ -39,6 +39,7 @@ const ContactForm = () => {
         name: document.getElementById("name").value,
         email: document.getElementById("email").value,
         phoneNumber: phoneNumber,
+        phoneNumberParent: document.getElementById("phonenumberParent").value,
         school: document.getElementById("school").value,
         city: document.getElementById("city").value,
         grade: document.getElementById("grade").value,
@@ -49,7 +50,7 @@ const ContactForm = () => {
 
       // Set the form data JSON and show the modal
       setFormDataJson(JSON.stringify(formData, null, 2));
-      const messageText = `#formSubmission\nНовая заявка\nИмя Фамилия: ${formData.name}\nEmail: ${formData.email}\nТелефон: ${formData.phoneNumber}\nШкола: ${formData.school}(Класс: ${formData.grade}, Возраст: ${formData.age})\nГород: ${formData.city}\nТур: ${formData.tour}\nДополнительно: ${formData.message}`;
+      const messageText = `#formSubmission\nНовая заявка\nИмя Фамилия: ${formData.name}\nEmail: ${formData.email}\nТелефон ученика: ${formData.phoneNumber}\nТелефон родителя: ${formData.phoneNumberParent}\nШкола: ${formData.school}(Класс: ${formData.grade}, Возраст: ${formData.age})\nГород: ${formData.city}\nТур: ${formData.tour}\nДополнительно: ${formData.message}`;
   
       const botToken = import.meta.env.VITE_TELEGRAM_BOT_TOKEN;
       const chatId = import.meta.env.VITE_TELEGRAM_CHAT_ID;
@@ -130,7 +131,6 @@ const ContactForm = () => {
               <label htmlFor="phonenumberParent" className="lh-1 text-16 text-light-1">
               Номер телефона родителя
               </label>
-              {phoneNumberError && <div className="text-danger">{phoneNumberError}</div>}
             </div>
           </div>
         </div>
