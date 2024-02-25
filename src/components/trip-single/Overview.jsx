@@ -5,7 +5,7 @@ import getCost from "@/utils/costCalculator";
 
 
 const Overview = ({trip}) => {
-  const [cost, setCost] = useState({ usd: 0, kzt: 0 });
+  const [cost, setCost] = useState({ usd: 4950, kzt: 0 });
 
   useEffect(() => {
     const fetchCost = async () => {
