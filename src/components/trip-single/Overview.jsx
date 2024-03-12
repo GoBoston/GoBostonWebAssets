@@ -37,7 +37,7 @@ const Overview = ({trip}) => {
         <div className="col-md-6 border-top-light">
           <h5 className="text-16 fw-500">Стоимость Поездки</h5>
           <div className="text-15 mt-10">
-          {cost.hide ? 'Программа уточняется' : `${cost.usd}$ (${cost.kzt} KZT)`}
+            {cost.hide ? "Программа уточняется" : `${cost.usd}$ (${cost.kzt} KZT)`}
           </div>
         </div>
       </div>
