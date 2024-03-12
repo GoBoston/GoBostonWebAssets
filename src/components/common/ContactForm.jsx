@@ -1,9 +1,9 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
+import cities from "@/data/cities";
 import schools from "@/data/schools";
 import trips from "@/data/trips";
-import cities from "@/data/cities";
 
 const ContactForm = () => {
   const [showModal, setShowModal] = React.useState(false);

@@ -24,15 +24,15 @@ const Faq = ({trip}) => {
               id={"q"+index}
               data-bs-parent="#Faq1"
             >
-            <div className="pt-15 pl-60">
-              {Array.isArray(item.a) ? (
-                item.a.map((element, index) => (
-                  <p key={index} className="text-15">{element}</p>
-                ))
-              ) : (
-                <p className="text-15">{item.a}</p>
-              )}
-            </div>
+              <div className="pt-15 pl-60">
+                {Array.isArray(item.a) ? (
+                  item.a.map((element, index) => (
+                    <p key={index} className="text-15">{element}</p>
+                  ))
+                ) : (
+                  <p className="text-15">{item.a}</p>
+                )}
+              </div>
             </div>
             {/* End accordion conent */}
           </div>

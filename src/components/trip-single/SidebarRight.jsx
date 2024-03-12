@@ -16,7 +16,7 @@ const SidebarRight = ({ trip }) => {
     };
 
     fetchCost();
-  }, [trip.cost.default]); // dependency array ensures this runs only when trip.cost.default changes
+  }, [trip.cost]); // dependency array ensures this runs only when trip.cost.default changes
 
   return (
     <div className="d-flex justify-end js-pin-content">
@@ -25,7 +25,7 @@ const SidebarRight = ({ trip }) => {
           <div className="text-14 text-light-1">
             Стоимость: {" "}
             <span className="text-20 fw-500 text-dark-1 ml-5">
-            {cost.hide ? 'Программа уточняется' : `${cost.usd}$ (${cost.kzt} KZT)`}
+              {cost.hide ? "Программа уточняется" : `${cost.usd}$ (${cost.kzt} KZT)`}
             </span>
           </div>
           {/* End div */}
