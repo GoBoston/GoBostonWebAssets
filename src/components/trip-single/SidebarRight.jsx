@@ -14,7 +14,6 @@ const SidebarRight = ({ trip }) => {
       const costData = await getCost(trip.cost);
       setCost(costData);
     };
-
     fetchCost();
   }, [trip.cost]); // dependency array ensures this runs only when trip.cost.default changes
 
