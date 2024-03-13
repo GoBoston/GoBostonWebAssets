@@ -37,21 +37,22 @@ const ContactForm = () => {
       // Extracting values directly from the DOM
       const formData = {
         name: document.getElementById("name").value,
-        email: document.getElementById("email").value,
+        personIdentity: document.getElementById("phoneOwnerToggle").checked? "Родитель": "Ученик",
         phoneNumber: phoneNumber,
-        phoneNumberParent: document.getElementById("phonenumberParent").value,
         school: document.getElementById("school").value,
         city: document.getElementById("city").value,
         grade: document.getElementById("grade").value,
+        age: document.getElementById("age").value,
         tour: document.getElementById("tour").value,
         message: document.getElementById("message").value,
-        age: document.getElementById("age").value,
       };
-
+    
+    
       // Set the form data JSON and show the modal
       setFormDataJson(JSON.stringify(formData, null, 2));
-      const messageText = `#formSubmission\nНовая заявка\nИмя Фамилия: ${formData.name}\nEmail: ${formData.email}\nТелефон ученика: ${formData.phoneNumber}\nТелефон родителя: ${formData.phoneNumberParent}\nШкола: ${formData.school}(Класс: ${formData.grade}, Возраст: ${formData.age})\nГород: ${formData.city}\nТур: ${formData.tour}\nДополнительно: ${formData.message}`;
-  
+      
+      const messageText = `#formSubmission\nНовая заявка\nИмя Фамилия: ${formData.name}\nEmail: ${formData.email}\nИдентификатор: ${formData.personIdentity}\nТелефон: ${formData.phoneNumber}\nШкола: ${formData.school}(Класс: ${formData.grade}, Возраст: ${formData.age})\nГород: ${formData.city}\nТур: ${formData.tour}\nДополнительно: ${formData.message}`;
+
       const botToken = import.meta.env.VITE_TELEGRAM_BOT_TOKEN;
       const chatId = import.meta.env.VITE_TELEGRAM_CHAT_ID;
       const sendMessageUrl = `https://api.telegram.org/bot${botToken}/sendMessage`;
@@ -94,16 +95,22 @@ const ContactForm = () => {
     <section className="layout-pt-md layout-pb-lg">
       <form className="row y-gap-20 pt-30" onSubmit={handleSubmit}>
         <div className="row justify-content-start">
-          <div className="col-12 col-md-6 offset-md-3 offset-0">
+          <div className="col-12 col-md-3 offset-md-3">
             <div className="form-input">
               <input type="text" id="name" required />
-              <label htmlFor="name" className="lh-1 text-16 text-light-1">
-              Имя Фамилия
-              </label>
+              <label htmlFor="name" className="lh-1 text-16 text-light-1">Имя Фамилия</label>
+            </div>
+          </div>
+          <div className="col-12 col-md-3">
+            <div className="form-input">
+              <input type="text" id="phonenumber" required />
+              <label htmlFor="phonenumber" className="lh-1 text-16 text-light-1">Телефон</label>
+              {phoneNumberError && <div className="text-danger">{phoneNumberError}</div>}
             </div>
           </div>
         </div>
-        <div className="row justify-content-start">
+
+        {/* <div className="row justify-content-start">
           <div className="col-12 col-md-6 offset-md-3 offset-0">
             <div className="form-input">
               <input type="email" id="email" required />
@@ -112,30 +119,27 @@ const ContactForm = () => {
               </label>
             </div>
           </div>
-        </div>
+        </div> */}
+
         <div className="row justify-content-start">
           <div className="col-12 col-md-6 offset-md-3 offset-0">
-            <div className="form-input">
-              <input type="text" id="phonenumber" required />
-              <label htmlFor="phonenumber" className="lh-1 text-16 text-light-1">
-              Номер телефона ученика
+            <div className="toggle-switch-container">
+              <label className="toggle-switch">
+                <input type="checkbox" id="phoneOwnerToggle" />
+                <span className="slider round"></span>
               </label>
-              {phoneNumberError && <div className="text-danger">{phoneNumberError}</div>}
+              <label htmlFor="phoneOwnerToggle" className="ms-2">Это данные родителя</label>
             </div>
           </div>
         </div>
+
+
+
+
+
+
         <div className="row justify-content-start">
-          <div className="col-12 col-md-6 offset-md-3 offset-0">
-            <div className="form-input">
-              <input type="text" id="phonenumberParent" required />
-              <label htmlFor="phonenumberParent" className="lh-1 text-16 text-light-1">
-              Номер телефона родителя
-              </label>
-            </div>
-          </div>
-        </div>
-        <div className="row justify-content-start">
-          <div className="col-12 col-md-6 offset-md-3 offset-0">
+          <div className="col-12 col-md-3 offset-md-3 offset-0">
             <label>Школа</label>
             <div className="form-input">
               <select id="school" className="form-select" required>
@@ -144,12 +148,9 @@ const ContactForm = () => {
                 ))}
                 <option value="Other Public School">Другая школа</option>
               </select>
-
             </div>
           </div>
-        </div>
-        <div className="row justify-content-start">
-          <div className="col-12 col-md-6 offset-md-3 offset-0">
+          <div className="col-12 col-md-3">
             <label>Город</label>
             <div className="form-input">
               <select id="city" className="form-select" required>
@@ -161,26 +162,22 @@ const ContactForm = () => {
             </div>
           </div>
         </div>
+
         <div className="row justify-content-start">
-          <div className="col-12 col-md-6 offset-md-3 offset-0">
+          <div className="col-12 col-md-3 offset-md-3">
             <div className="form-input">
-              <input type="number" id="grade" required />
-              <label htmlFor="grade" className="lh-1 text-16 text-light-1">
-              Класс обучения
-              </label>
+              <input type="number" id="grade" required defaultValue="10" />
+              <label htmlFor="grade" className="lh-1 text-16 text-light-1">Класс обучения</label>
+            </div>
+          </div>
+          <div className="col-12 col-md-3">
+            <div className="form-input">
+              <input type="number" id="age" required defaultValue="15" />
+              <label htmlFor="age" className="lh-1 text-16 text-light-1">Возраст</label>
             </div>
           </div>
         </div>
-        <div className="row justify-content-start">
-          <div className="col-12 col-md-6 offset-md-3 offset-0">
-            <div className="form-input">
-              <input type="number" id="age" required />
-              <label htmlFor="age" className="lh-1 text-16 text-light-1">
-              Возраст
-              </label>
-            </div>
-          </div>
-        </div>
+
         <div className="row justify-content-start">
           <div className="col-12 col-md-6 offset-md-3 offset-0">
             <label>Тур</label>
