@@ -543,3 +543,18 @@
 .header .header-menu .menu-item-has-children .mega a {
   font-weight: 400;
 }
+
+.special-apply-link a {
+  color: #fff2f2;; /* Change the font color */
+  font-weight: bold; /* Make the font weight bold */
+  background-color: #d10000;  /* Add a subtle background color */
+  padding: 5px 10px; /* Add some padding */
+  border-radius: 5px; /* Add rounded corners */
+  border: 2px solid #d10000; /* Add a border */
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.special-apply-link a:hover {
+  background-color: #fff2f2; /* Change background on hover */
+  color: #d10000; /* Change text color on hover */
+}

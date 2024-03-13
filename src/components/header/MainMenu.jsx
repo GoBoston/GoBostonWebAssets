@@ -91,7 +91,7 @@ const MainMenu = ({ style = "" }) => {
         </li>
         {/* End Destinatinos single menu */}
 
-        <li className={pathname === "/destinations" ? "current" : ""}>
+        <li className={`menu-item-has-children ${pathname === "/apply" ? "current" : ""} special-apply-link`}>
           <Link to="/apply">Оставить заявку</Link>
         </li>
         {/* End Destinatinos single menu */}
