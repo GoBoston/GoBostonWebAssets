@@ -18,6 +18,7 @@ function MetaComponent({ meta }) {
             s.parentNode.insertBefore(t,s)}(window, document,'script',
             'https://connect.facebook.net/en_US/fbevents.js');
             fbq('init', '699660572110178');
+            fbq('track', 'PageView');
           `}
         </script>
         <noscript key="image" id="facebook-pixel-image">
