@@ -91,8 +91,17 @@ const MainMenu = ({ style = "" }) => {
         </li>
         {/* End Destinatinos single menu */}
 
+        <li className={pathname === "/destinations" ? "current" : ""}>
+          <Link to="/about">Отзывы</Link>
+        </li>
+        {/* End Destinatinos single menu */}
+        <li className={pathname === "/destinations" ? "current" : ""}>
+          <Link to="/about">Контакты</Link>
+        </li>
+        {/* End Destinatinos single menu */}
+
         <li className={`menu-item-has-children ${pathname === "/apply" ? "current" : ""} special-apply-link`}>
-          <Link to="/apply">Оставить заявку</Link>
+          <Link to="/apply">Оставить заявку на бесплатную консультацию</Link>
         </li>
         {/* End Destinatinos single menu */}
 

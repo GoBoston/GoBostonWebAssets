@@ -9,6 +9,8 @@ import TestimonialRating from "@/components/home/TestimonialRating";
 import Search from "@/components/search";
 import TripPast from "@/components/trip-single/TripPast";
 import UpcomingTrips from "@/components/trip-single/UpcomingTrips";
+import AboutTeamOverview from "@/components/about/AboutTeamOverview";
+
 
 
 const metadata = {
@@ -37,6 +39,15 @@ const Home = () => {
         </div>
       </section>
       {/* End travel block sections */}
+
+      <section className="layout-pt-md">
+        <div className="container">
+          <div className="row y-gap-30 justify-between items-center">
+            <AboutTeamOverview />
+          </div>
+        </div>
+      </section>
+
 
       <UpcomingTrips />
 

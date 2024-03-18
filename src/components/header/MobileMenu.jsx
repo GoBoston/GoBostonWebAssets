@@ -89,13 +89,14 @@ const MobileMenu = () => {
           >
             О нас
           </MenuItem>
+          
           {/* End  All Dashboard Menu */}
 
           <MenuItem
             onClick={() => navigate("/apply")}
             className={pathname === "/destinations" ? "current" : ""}
           >
-            Оставить заявку
+            Оставить заявку на бесплатную консультацию
           </MenuItem>
           {/* End Contact  Menu */}
         </Menu>

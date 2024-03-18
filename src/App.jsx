@@ -26,6 +26,7 @@ import TripsPastAll from "./pages/trips/tripsPast/tripsPastAll";
 import TripsUpcoming from "./pages/trips/tripsUpcoming/tripsUpcomingAll";
 import TripUpcoming from "./pages/trips/tripsUpcoming/tripUpcoming";
 import { store } from "./store/store";
+import Confidentiality from "./pages/confidentiality";
 if (typeof window !== "undefined") {
   import("bootstrap");
 }
@@ -76,6 +77,8 @@ function App() {
               </Route>
 
               <Route path="about" element={<About />} />
+
+              <Route path="confidentiality" element={<Confidentiality />} />
 
               <Route path="apply" element={<Apply />} />
 

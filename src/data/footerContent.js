@@ -14,6 +14,7 @@ const footercontent = [
     menuList: [
       { name: "О нас", routerPath: "/" },
       { name: "Наши любимые места", routerPath: "/" },
+      { name: "Полика конфеденциальности", routerPath: "/confidentiality" },
     ],
   }
 ];
