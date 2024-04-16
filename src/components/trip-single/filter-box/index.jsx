@@ -22,7 +22,7 @@ const index = ({trip}) => {
           to="/apply"
           className="button -dark-1 py-15 px-35 h-60 col-12 rounded-4 bg-blue-1 text-white"
         >
-          Подать заявку
+          {trip.tag == "Набор закрыт"? "Набор закрыт" : "Подать заявку"}
         </Link>
       </div>
       {/* End .col-12 */}

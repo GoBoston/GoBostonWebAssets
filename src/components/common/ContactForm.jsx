@@ -133,11 +133,6 @@ const ContactForm = () => {
           </div>
         </div>
 
-
-
-
-
-
         <div className="row justify-content-start">
           <div className="col-12 col-md-3 offset-md-3 offset-0">
             <label>Школа</label>
@@ -183,9 +178,14 @@ const ContactForm = () => {
             <label>Тур</label>
             <div className="form-input">
               <select id="tour" className="form-select" required>
-                {trips.slice(0, 8).map((item) => (
-                  <option key={item.id} value={item.name}>{item.name}</option>
-                ))}
+                {
+                  trips
+                    .filter(item => item.tag !== "Набор закрыт") // Filter out trips with the tag 'Набор Закрыт'
+                    .slice(0, 8) // Limit to the first 8 items after filtering
+                    .map((item) => (
+                      <option key={item.id} value={item.name}>{item.name}</option>
+                    ))
+                }
               </select>
             </div>
           </div>

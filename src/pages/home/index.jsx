@@ -1,4 +1,5 @@
 
+import AboutTeamOverview from "@/components/about/AboutTeamOverview";
 import MetaComponent from "@/components/common/MetaComponent";
 import Footer from "@/components/footer";
 import Header from "@/components/header";
@@ -9,7 +10,6 @@ import TestimonialRating from "@/components/home/TestimonialRating";
 import Search from "@/components/search";
 import TripPast from "@/components/trip-single/TripPast";
 import UpcomingTrips from "@/components/trip-single/UpcomingTrips";
-import AboutTeamOverview from "@/components/about/AboutTeamOverview";
 
 
 

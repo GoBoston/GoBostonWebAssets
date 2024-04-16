@@ -5,7 +5,7 @@ import getCost from "@/utils/costCalculator";
 
 
 const Overview = ({trip}) => {
-  const [cost, setCost] = useState({ usd: 4950, kzt: 0 });
+  const [cost, setCost] = useState({ usd: 0, kzt: 0 });
 
   useEffect(() => {
     const fetchCost = async () => {
@@ -37,7 +37,7 @@ const Overview = ({trip}) => {
         <div className="col-md-6 border-top-light">
           <h5 className="text-16 fw-500">Стоимость Поездки</h5>
           <div className="text-15 mt-10">
-            {cost.hide ? "Программа уточняется" : `${cost.usd}$ (${cost.kzt} KZT)`}
+            {cost.hide ? "Оставьте заявку" : `${cost.usd}$ (${cost.kzt} KZT)`}
           </div>
         </div>
       </div>

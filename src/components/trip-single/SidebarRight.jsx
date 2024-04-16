@@ -7,7 +7,7 @@ import getCost from "@/utils/costCalculator";
 
 
 const SidebarRight = ({ trip }) => {
-  const [cost, setCost] = useState({ usd: 4950, kzt: 0 });
+  const [cost, setCost] = useState({ usd: 0, kzt: 0 });
 
   useEffect(() => {
     const fetchCost = async () => {
@@ -24,7 +24,7 @@ const SidebarRight = ({ trip }) => {
           <div className="text-14 text-light-1">
             Стоимость: {" "}
             <span className="text-20 fw-500 text-dark-1 ml-5">
-              {cost.hide ? "Программа уточняется" : `${cost.usd}$ (${cost.kzt} KZT)`}
+              {cost.hide ? "Оставьте заявку" : `${cost.usd}$ (${cost.kzt} KZT)`}
             </span>
           </div>
           {/* End div */}

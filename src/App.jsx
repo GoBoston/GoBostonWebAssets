@@ -21,12 +21,12 @@ import Event from "./pages/boston/events/event";
 import Events from "./pages/boston/events/eventsAll";
 import Universities from "./pages/boston/universities/universitiesAll";
 import University from "./pages/boston/universities/university";
+import Confidentiality from "./pages/confidentiality";
 import TripPast from "./pages/trips/tripsPast/tripPast";
 import TripsPastAll from "./pages/trips/tripsPast/tripsPastAll";
 import TripsUpcoming from "./pages/trips/tripsUpcoming/tripsUpcomingAll";
 import TripUpcoming from "./pages/trips/tripsUpcoming/tripUpcoming";
 import { store } from "./store/store";
-import Confidentiality from "./pages/confidentiality";
 if (typeof window !== "undefined") {
   import("bootstrap");
 }
